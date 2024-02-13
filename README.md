@@ -64,7 +64,7 @@ List technologies that will be used in your app, including any libraries to save
 - Express.js
 - Database
 - Local storage
-- Responsive
+- Responsive (tablet and desktop)
 
 ### APIs
 
@@ -76,9 +76,18 @@ List any external sources of data that will be used in your app.
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
 
+- Home Page (header and footer)
+  - About
+  - Stories
+  - Flashcards
+    - practice
+    - quiz (multiple choice)
+    - card pairing game
+
 ### Mockups
 
-![homepage](./assets/Screenshot%202024-02-12%20at%208.58.36 PM.png)
+![olixkado](./assets/oli/oli_home.jpg)
+![homepage](./assets/home.png)
 ![about](./assets/about.png)
 ![Kadolinguo](./assets/about2.png)
 ![explore](./assets/explore.png)
@@ -89,6 +98,14 @@ List the pages of your app with brief descriptions. You can show this visually, 
 ![add card](./assets/add%20card2.png)
 ![edit card](./assets/edit%20card2.png)
 ![connect](./assets/contact.png)
+
+### Cards
+
+![confused](./assets/oli/oli.%20confused.jpg)
+![happy](./assets/oli/oli.%20happy.jpg)
+![scared](./assets/oli/oli.scared.jpg)
+![take photo](./assets/oli/oli.take%20photo.jpg)
+![take nap](./assets/oli/oli.%20take%20a%20nap.jpg)
 
 ### Data
 
