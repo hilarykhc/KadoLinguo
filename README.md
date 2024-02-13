@@ -19,12 +19,14 @@ This app allows users to access inspiring stories and ready-made flashcards, qui
 2. Personalized learning journey _(nice-to-have feature)_:
 
 - One-size-fits-all language learning may not cater to everyone.
-- KādoLinguo offers features like flashcard creation which allows users to tailor their learning journey. This ensures that users can focus on areas where they need improvement and learn at their own pace.
+- KādoLinguo offers features like flashcard creation which allows users to tailor their learning journey.
+- This ensures that users can focus on areas where they need improvement and learn at their own pace.
 
 3. Visual association for better retention:
 
 - Traditional way of memorizing vocabulary and sentences can be challenging without proper context or visual aidds.
-- KādoLinguo offers card pairing game to enhance visual association and reinforce vocabulary. This can significantly enhance memory retention and make the learning process more effective.
+- KādoLinguo offers card pairing game to enhance visual association and reinforce vocabulary.
+- This can significantly enhance memory retention and make the learning process more effective.
 
 ### User Profile
 
@@ -117,7 +119,7 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 
 2. Flashcard Creation
 
-- Users can create new flashcards for personalized experience (only word and definition).
+- Users can create new flashcards for personalized experience (word and definition).
 
 3. Progress Tracking
 
