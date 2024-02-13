@@ -70,7 +70,8 @@ List technologies that will be used in your app, including any libraries to save
 
 List any external sources of data that will be used in your app.
 
-- Story series with Ollie
+- Story series with Oli
+  ![storybook snippet](./assets/oli/oli.story.jpg)
 
 ### Sitemap
 
