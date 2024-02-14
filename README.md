@@ -87,6 +87,7 @@ List the pages of your app with brief descriptions. You can show this visually, 
 
 ### Mockups
 
+![oli homepage](./src/assets/oli/oli_home2.png)
 ![olixkado](./assets/oli/oli_home.jpg)
 ![homepage](./assets/home.png)
 ![about](./assets/about.png)
