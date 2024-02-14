@@ -88,26 +88,26 @@ List the pages of your app with brief descriptions. You can show this visually, 
 ### Mockups
 
 ![oli homepage](./src/assets/oli/oli_home2.png)
-![olixkado](./assets/oli/oli_home.jpg)
-![homepage](./assets/home.png)
-![about](./assets/about.png)
-![Kadolinguo](./assets/about2.png)
-![explore](./assets/explore.png)
-![explore2](./assets/explore2.png)
-![practice](./assets/practice.png)
-![quiz](./assets/quiz.png)
-![card pairing](./assets/card%20pairing.png)
-![add card](./assets/add%20card2.png)
-![edit card](./assets/edit%20card2.png)
-![connect](./assets/contact.png)
+![olixkado](./src/assets/oli/oli_home.jpg)
+![homepage](./src/assets/home.png)
+![about](./src/assets/about.png)
+![Kadolinguo](./src/assets/about2.png)
+![explore](./src/assets/explore.png)
+![explore2](./src/assets/explore2.png)
+![practice](./src/assets/practice.png)
+![quiz](./src/assets/quiz.png)
+![card pairing](./src/assets/card%20pairing.png)
+![add card](./src/assets/add%20card2.png)
+![edit card](./src/assets/edit%20card2.png)
+![connect](./src/assets/contact.png)
 
 ### Cards
 
-![confused](./assets/oli/oli.%20confused.jpg)
-![happy](./assets/oli/oli.%20happy.jpg)
-![scared](./assets/oli/oli.scared.jpg)
-![take photo](./assets/oli/oli.take%20photo.jpg)
-![take nap](./assets/oli/oli.%20take%20a%20nap.jpg)
+![confused](./src/assets/oli/oli.%20confused.jpg)
+![happy](./src/assets/oli/oli.%20happy.jpg)
+![scared](./src/assets/oli/oli.scared.jpg)
+![take photo](./src/assets/oli/oli.take%20photo.jpg)
+![take nap](./src/assets/oli/oli.%20take%20a%20nap.jpg)
 
 ### Data
 
