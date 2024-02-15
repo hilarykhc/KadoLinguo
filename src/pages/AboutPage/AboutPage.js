@@ -1,3 +1,3 @@
 export default function AboutPage() {
-  return <div>KādoLinguo + gif about Oli</div>;
+  return <div>2 components: About KādoLinguo + gif about Oli</div>;
 }

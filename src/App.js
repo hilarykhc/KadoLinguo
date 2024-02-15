@@ -20,12 +20,13 @@ export default function App() {
         <Route path="/stories" element={<StoryPage />} />
         <Route path="/stories/:storyId" element={<StoryPage />} />
         <Route path="/flashcards" element={<FlashCardPage />} />
+        <Route path="/flashcards/practice" element={<PracticePage />} />
         <Route
           path="/flashcards/practice/:practiceId"
           element={<PracticePage />}
         />
-        <Route path="/flashcards/quiz/:quizId" element={<QuizPage />} />
-        <Route path="/flashcards/game/:gameId" element={<GamePage />} />
+        <Route path="/flashcards/quiz" element={<QuizPage />} />
+        <Route path="/flashcards/game" element={<GamePage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
