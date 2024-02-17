@@ -1,0 +1,41 @@
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.quiz {
+  &__container {
+    background-image: url("../../assets/sea.jpg");
+    height: 30rem;
+    background-size: cover;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+}
+
+.container-big {
+  text-align: center;
+  margin: 0 5rem;
+}
+
+h2 {
+  padding-top: 10rem;
+}
+
+button {
+  margin-top: 2rem;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #808080;
+  font-size: large;
+  cursor: pointer;
+
+  &:hover {
+    // background-color: #ffdab8;
+    background-color: #ffefd5;
+  }
+}
+
+ul {
+  padding: 0;
+}

@@ -1,7 +1,22 @@
+import { useState } from "react";
 import "./StoryPage.scss";
 import { Link } from "react-router-dom";
+import storyData from "../../data/stories.json";
 
 export default function StoryPage() {
+  const [stories, setStories] = useState(storyData);
+  const [selectedStory, setSelectedStory] = useState(storyData[0]);
+
+  const handleSelectStory = (clickedId) => {
+    const foundStory = storyData.find((story) => clickedId === story.id);
+
+    setSelectedStory(foundStory);
+  };
+
+  const filteredStories = stories.filter(
+    (story) => story.id !== selectedStory.id
+  );
+
   return (
     <main>
       <section className="hero">
