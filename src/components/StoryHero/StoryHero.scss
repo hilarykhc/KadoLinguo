@@ -2,3 +2,10 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
+
+.hero {
+  &__img {
+    width: 96%;
+    padding: 4rem;
+  }
+}
