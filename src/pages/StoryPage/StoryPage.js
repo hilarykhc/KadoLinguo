@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./StoryPage.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import storyData from "../../data/stories.json";
@@ -11,6 +11,11 @@ export default function StoryPage() {
   const [selectedStory, setSelectedStory] = useState(
     storyId ? storyData.find((story) => story.id === storyId) : storyData[0]
   );
+  const [currentImgId, setCurrentImgId] = useState(storyId || storyData[0].id);
+
+  useEffect(() => {
+    setCurrentImgId(storyId || storyData[0].id);
+  }, [storyId]);
 
   const handleSelectStory = (clickedId) => {
     const foundStory = storyData.find((story) => clickedId === story.id);
@@ -20,9 +25,13 @@ export default function StoryPage() {
     navigate(`/stories/${foundStory.id}`);
   };
 
-  const filteredStories = stories.filter(
-    (story) => story.id !== selectedStory.id
-  );
+  const handleImgClick = (clickedId) => {
+    setCurrentImgId(clickedId);
+  };
+
+  // const filteredStories = stories.filter(
+  //   (story) => story.id !== selectedStory.id
+  // );
 
   return (
     <main>
@@ -33,15 +42,23 @@ export default function StoryPage() {
         <div className="story__list-wrapper">
           {stories.map((story) => (
             <div
-              className="story__list-wrapper-card"
-              onClick={() => handleSelectStory(story.id)}
+              key={story.id}
+              className={`story__list-wrapper-card ${
+                currentImgId === story.id ? "clicked" : ""
+              }`}
+              onClick={() => {
+                handleSelectStory(story.id);
+                handleImgClick(story.id);
+              }}
             >
               <article className="story__list-wrapper-card2">
                 <div>
                   <img
                     src={story.image}
                     alt={story.title}
-                    className="story__list-wrapper-card-img"
+                    className={`story__list-wrapper-card-img ${
+                      currentImgId === story.id ? "default-grayscale" : ""
+                    }`}
                   />
                 </div>
               </article>
@@ -49,15 +66,6 @@ export default function StoryPage() {
           ))}
           {/* <p className="story__list-title">{selectedStory.title}</p> */}
         </div>
-        {/* <Link to="/stories/:storyId">
-          <li className="story__list-item">{selectedStory.title}</li>
-        </Link> */}
-        {/* <Link to="/stories/2">
-          <li className="story__list-item">story 2</li>
-        </Link>
-        <Link to="/stories/3">
-          <li className="story__list-item">story 3</li>
-        </Link> */}
       </section>
       {/* Story component: map through stories // 3 stories with Hero section
       showing current selected story */}
