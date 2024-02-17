@@ -1,11 +1,10 @@
 import "./HomePage.scss";
-import mockupHomePage from "../../assets/oli/oli_home2.png";
+import mockupHomePage from "../../assets/oli/oli.homepage.png";
 
 export default function HomePage() {
   return (
-    <main>
-      HomePage
-      <section>
+    <main className="homepage">
+      <section className="homepage__hero">
         <img className="mockup" src={mockupHomePage} />
       </section>
     </main>

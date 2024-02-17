@@ -6,7 +6,7 @@ export default function Header() {
     <header className="header">
       <section className="header__container">
         <Link to="/" className="header__logo">
-          KādoLinguo logo
+          KādoLinguo
         </Link>
 
         {/* <div> */}

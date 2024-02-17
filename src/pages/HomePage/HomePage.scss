@@ -6,4 +6,9 @@
 .mockup {
   object-fit: cover;
   width: -webkit-fill-available;
+  margin: -1.2rem 0 -2rem;
+
+  @include tablet-and-desktop {
+    margin: -2.25rem 0 -2rem;
+  }
 }
