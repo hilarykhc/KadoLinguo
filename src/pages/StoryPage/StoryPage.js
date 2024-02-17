@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./StoryPage.scss";
 import { Link } from "react-router-dom";
 import storyData from "../../data/stories.json";
+import StoryHero from "../../components/StoryHero/StoryHero";
 
 export default function StoryPage() {
   const [stories, setStories] = useState(storyData);
@@ -20,7 +21,7 @@ export default function StoryPage() {
   return (
     <main>
       <section className="hero">
-        Hero section for current selected story
+        <StoryHero selectedStory={selectedStory} />
       </section>
       <ul className="story__list">
         <Link to="/stories/1">
