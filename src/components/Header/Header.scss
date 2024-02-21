@@ -10,7 +10,7 @@
     position: relative;
     z-index: 1;
     padding: 0.2rem;
-    // background-color: #e6e6fa;
+    background-color: rgba(230, 230, 250, 0.5);
 
     @include tablet-and-desktop {
       padding: 0.25rem 1rem;

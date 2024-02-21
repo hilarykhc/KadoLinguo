@@ -12,3 +12,26 @@
     margin: -2.25rem 0 -2rem;
   }
 }
+
+.homepage {
+  // &__img {
+  //   background-image: url(../../assets/oli/oli.homepage.png);
+  // }
+
+  &__title {
+    color: $pure-white;
+    position: absolute;
+    margin: 1rem;
+    font-size: larger;
+
+    @include tablet-and-desktop {
+      margin: 4rem;
+      font-size: xx-large;
+    }
+
+    @include desktop {
+      margin: 8rem;
+      font-size: xxx-large;
+    }
+  }
+}

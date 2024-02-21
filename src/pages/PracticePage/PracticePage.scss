@@ -11,7 +11,7 @@
     transition: transform 0.5s;
     transform-style: preserve-3d;
     margin-top: 2rem;
-    background-image: url("../../assets/sea.jpg");
+    // background-image: url("../../assets/sea.jpg");
     height: 30rem;
     background-size: cover;
     border-radius: 0.25rem;
@@ -34,16 +34,22 @@
     }
 
     &-front {
-      //   background-color: #b9dedb;
-      background-image: url("../../assets/sea.jpg");
-      background-size: cover;
+      // background-color: #e6e6fa;
+      // background-color: #d0c8da;
+      // background-color: #fffacd;
+      // background-image: url("../../assets/sea.jpg");
+      // background-size: cover;
       border-radius: 0.25rem;
       height: 30rem;
     }
 
     &-back {
-      background-color: #b9dedb;
+      // background-color: #b9dedb;
+      // background-color: #c8d9f5;
+      background-color: #fffacd;
+      border-radius: 0.25rem;
       transform: rotateY(180deg);
+      // max-width: 33rem;
     }
   }
 

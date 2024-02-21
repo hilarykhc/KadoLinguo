@@ -21,10 +21,7 @@ export default function App() {
         <Route path="/stories/:storyId" element={<StoryPage />} />
         <Route path="/flashcards" element={<FlashCardPage />} />
         <Route path="/flashcards/practice" element={<PracticePage />} />
-        <Route
-          path="/flashcards/practice/:practiceId"
-          element={<PracticePage />}
-        />
+        <Route path="/flashcards/practice/:cardId" element={<PracticePage />} />
         <Route path="/flashcards/quiz" element={<QuizPage />} />
         <Route path="/flashcards/game" element={<GamePage />} />
       </Routes>

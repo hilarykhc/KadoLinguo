@@ -3,54 +3,88 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
+
 export default function PracticePage() {
-  const { cardId } = useParams();
-  const [currentCardId, setCurrentCardId] = useState(parseInt(cardId || 1));
+  const { cardId = "" } = useParams();
+  const [cards, setCards] = useState([]);
   const [currentCard, setCurrentCard] = useState(null);
-  const [allCards, setAllCards] = useState([]);
+  const [currentCardId, setCurrentCardId] = useState(parseInt(cardId || 1));
+
   const [loading, setLoading] = useState(true);
-  const [isFlipped, setIsFlipped] = useState(false); // New state for flip
-  const navigate = useNavigate(); //to navigate to homepage when we are out of cards
+  const [isFlipped, setIsFlipped] = useState(false);
+  const navigate = useNavigate();
+
+  console.log(cardId);
 
   useEffect(() => {
-    const fetchCards = async () => {
+    const getCards = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8081/cards/${currentCardId}`
-        );
-        setCurrentCard(response.data);
+        // const response = await axios.get(`${REACT_APP_SERVER_URL}/cards`);
+        const response = await axios.get("http://localhost:8080/cards");
+        console.log(response.data);
+        setCards(response.data);
       } catch (error) {
         console.error(error);
-        setCurrentCard(null);
+      }
+    };
+    getCards();
+  }, []);
+
+  useEffect(() => {
+    const getSingleCard = async () => {
+      try {
+        const singleCard = currentCardId;
+        const singleCardRes = await axios.get(
+          `http://localhost:8080/cards/${singleCard}`
+        );
+        setCurrentCard(singleCardRes.data);
+      } catch (error) {
+        console.error("Error getting single card:", error);
+
+        if (error.response && error.response.status === 404) {
+          setCurrentCard(null);
+        } else {
+          console.log();
+        }
       } finally {
         setLoading(false);
       }
     };
-    fetchCards();
-  }, [cardId, currentCardId]);
-
-  const getAllCards = async () => {
-    try {
-      const response = await axios.get("http://localhost:8081/cards");
-      setAllCards(response.data);
-    } catch (error) {
-      console.error("Error fetching flashcard data:", error);
-    }
-  };
-
-  useEffect(() => {
-    getAllCards();
+    getSingleCard();
   }, [cardId]);
+
+  // function renderFrontImage(front) {
+  //   if (front && front.type === "Buffer") {
+  //     const imageSrc = `data:image/png;base64,${arrayBufferToBase64(
+  //       front.data.data
+  //     )}`;
+  //     console.log(imageSrc);
+  //     return <img src={imageSrc} alt="Front Image" />;
+  //   } else {
+  //     return <span>{front}</span>;
+  //   }
+  // }
+
+  // function arrayBufferToBase64(buffer) {
+  //   let binary = "";
+  //   const bytes = new Uint8Array(buffer);
+  //   bytes.forEach((byte) => {
+  //     binary += String.fromCharCode(byte);
+  //   });
+  //   console.log(bytes);
+  //   return btoa(binary);
+  // }
 
   const handleNextClick = () => {
     const nextCardId = currentCardId + 1;
     setCurrentCardId(nextCardId);
-    setIsFlipped(false); // Reset flip state when moving to the next card
-    window.history.pushState(null, null, `/cards/${nextCardId}`);
+    setIsFlipped(false); // reset flip
+    navigate(`/flashcards/practice/${nextCardId}`);
   };
 
   const handleCardClick = () => {
-    setIsFlipped(!isFlipped); // Toggle the flip state on card click
+    setIsFlipped(!isFlipped); // toggle flip
   };
   const handleGoHomeClick = () => {
     navigate("/");
@@ -77,10 +111,14 @@ export default function PracticePage() {
         onClick={handleCardClick}
       >
         <div className="center__card-front">
-          <h3 className="center__card-english">{currentCard.english}</h3>
+          <img
+            src={currentCard.front}
+            alt={currentCard.back}
+            style={{ maxWidth: "100%", height: "100%", objectFit: "cover" }}
+          />
         </div>
         <div className="center__card-back">
-          <h3 className="center__card-french">{currentCard.french}</h3>
+          <div>{currentCard.back}</div>
         </div>
       </div>
       <button className="center__card-btn" onClick={handleNextClick}>
@@ -92,3 +130,45 @@ export default function PracticePage() {
     </div>
   );
 }
+
+// ------------------------------------------------
+
+// const { cardId } = useParams();
+// const [currentCardId, setCurrentCardId] = useState(parseInt(cardId || 1));
+// const [currentCard, setCurrentCard] = useState(null);
+// const [allCards, setAllCards] = useState([]);
+// const [loading, setLoading] = useState(true);
+// const [isFlipped, setIsFlipped] = useState(false); // New state for flip
+// const navigate = useNavigate(); //to navigate to homepage when we are out of cards
+
+// useEffect(() => {
+//   const fetchCards = async () => {
+//     try {
+//       const response = await axios.get(
+//         `${REACT_APP_SERVER_URL}/cards/${currentCardId}`
+//       );
+//       setCurrentCard(response.data);
+//     } catch (error) {
+//       console.error(error);
+//       setCurrentCard(null);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+//   fetchCards();
+// }, [cardId, currentCardId]);
+
+// const getAllCards = async () => {
+//   try {
+//     const response = await axios.get(`${REACT_APP_SERVER_URL}/cards`);
+//     setAllCards(response.data);
+//   } catch (error) {
+//     console.error("Error fetching flashcard data:", error);
+//   }
+// };
+
+// useEffect(() => {
+//   getAllCards();
+// }, [cardId]);
+
+//---------------------------------------------

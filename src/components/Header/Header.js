@@ -11,6 +11,9 @@ export default function Header() {
 
         {/* <div> */}
         <div className="header__nav">
+          <Link to="/" className="header__nav-item">
+            Home
+          </Link>
           <Link to="/about" className="header__nav-item">
             About
           </Link>
