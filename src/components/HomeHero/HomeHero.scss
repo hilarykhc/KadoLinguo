@@ -24,7 +24,7 @@
     margin: 5rem 0.75rem;
     font-size: 1.25rem;
 
-    animation: moveInFromBottom 1s ease-out;
+    animation: moveInFromBottom 1.5s ease-out;
 
     // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
     //   rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -37,8 +37,8 @@
     }
 
     @include desktop {
-      margin: 12rem 1.75rem;
-      font-size: 4rem;
+      margin: 19rem 1.75rem;
+      font-size: 5rem;
     }
   }
 
@@ -47,21 +47,30 @@
     margin: 7rem 0.75rem;
     color: $pure-white;
     font-size: 0.5rem;
-    animation: moveInFromBottom 1s ease-out;
+    animation: moveInFromBottom 1.5s ease-out;
 
     @include tablet-and-desktop {
       margin: 16.5rem 1.75rem;
       font-size: 1rem;
+    }
+
+    @include desktop {
+      margin: 26.5rem 1.75rem;
+      font-size: 1.75rem;
     }
   }
 
   &__button-wrapper {
     position: absolute;
     margin: 7.5rem 0.75rem;
-    animation: moveInFromBottom 1s ease-out;
+    animation: moveInFromBottom 1.5s ease-out;
 
     @include tablet-and-desktop {
       margin: 18.5rem 1.75rem;
+    }
+
+    @include desktop {
+      margin: 29.5rem 1.75rem;
     }
   }
 
@@ -76,6 +85,10 @@
 
     @include tablet-and-desktop {
       font-size: 1rem;
+    }
+
+    @include desktop {
+      font-size: 1.5rem;
     }
   }
 }

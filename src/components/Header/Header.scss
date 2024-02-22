@@ -13,7 +13,8 @@
     width: 100%;
     z-index: 1000;
     padding: 0 0.5rem;
-    background-color: rgba(230, 230, 250, 0.5);
+    // background-color: rgba(230, 230, 250, 0.5);
+    background-color: rgba(44, 44, 84, 0.5);
     align-items: center;
 
     @include tablet-and-desktop {
@@ -21,7 +22,7 @@
     }
 
     @include desktop {
-      height: 4rem;
+      height: 5.5rem;
     }
   }
 
@@ -35,6 +36,10 @@
 
     @include tablet-and-desktop {
       width: 3rem;
+    }
+
+    @include desktop {
+      width: 5rem;
     }
   }
 
@@ -55,6 +60,7 @@
 
       @include desktop {
         font-size: 1.75rem;
+        padding: 0.25rem 1rem;
       }
     }
   }
