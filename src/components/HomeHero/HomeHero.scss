@@ -6,10 +6,16 @@
 .mockup {
   object-fit: cover;
   width: -webkit-fill-available;
+  margin-top: 1.475rem;
   // margin: -1.2rem 0 -2rem;
 
   @include tablet-and-desktop {
     // margin: -2.25rem 0 -2rem;
+    margin-top: 3.475rem;
+  }
+
+  @include desktop {
+    margin-top: 5.515rem;
   }
 }
 
