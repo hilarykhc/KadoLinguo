@@ -7,20 +7,35 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    z-index: 1;
-    padding: 0.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 0.5rem;
     background-color: rgba(230, 230, 250, 0.5);
+    align-items: center;
 
     @include tablet-and-desktop {
       padding: 0.25rem 1rem;
     }
+
+    @include desktop {
+      height: 4rem;
+    }
+  }
+
+  &__link {
+    margin-bottom: -0.4rem;
   }
 
   &__logo {
-    font-size: 0.594rem;
-    color: $pure-white;
+    width: 1.5rem;
     text-decoration: none;
+
+    @include tablet-and-desktop {
+      width: 3rem;
+    }
   }
 
   &__nav {
@@ -36,6 +51,10 @@
       @include tablet-and-desktop {
         font-size: 1.25rem;
         padding-left: 1rem;
+      }
+
+      @include desktop {
+        font-size: 1.75rem;
       }
     }
   }

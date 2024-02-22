@@ -1,15 +1,17 @@
 import "./HomePage.scss";
 import mockupHomePage from "../../assets/oli/oli.homepage.png";
+import HomeHero from "../../components/HomeHero/HomeHero";
+import AboutOli from "../../components/AboutOli/AboutOli";
+
+const titleStyles = {
+  animation: "moveInFromBottom 1s ease-out",
+};
 
 export default function HomePage() {
   return (
     <main className="homepage">
-      <section className="homepage__hero">
-        <h1 className="homepage__title">KādoLinguo</h1>
-
-        <img className="mockup" src={mockupHomePage} />
-        {/* <h1 className="homepage__title">KādoLinguo</h1> */}
-      </section>
+      <HomeHero />
+      <AboutOli />
     </main>
   );
 }

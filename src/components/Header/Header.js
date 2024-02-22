@@ -1,12 +1,17 @@
 import "./Header.scss";
 import { Link, useLocation } from "react-router-dom";
+import kadolinguoLogo from "../../assets/logo/5.png";
 
 export default function Header() {
   return (
     <header className="header">
       <section className="header__container">
-        <Link to="/" className="header__logo">
-          KādoLinguo
+        <Link to="/" className="header__link">
+          <img
+            className="header__logo"
+            src={kadolinguoLogo}
+            alt="kadolinguo logo"
+          />
         </Link>
 
         {/* <div> */}

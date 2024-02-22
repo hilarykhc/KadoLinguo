@@ -1,0 +1,81 @@
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.mockup {
+  object-fit: cover;
+  width: -webkit-fill-available;
+  // margin: -1.2rem 0 -2rem;
+
+  @include tablet-and-desktop {
+    // margin: -2.25rem 0 -2rem;
+  }
+}
+
+.homepage {
+  // &__img {
+  //   background-image: url(../../assets/oli/oli.homepage.png);
+  // }
+
+  &__title {
+    color: $pure-white;
+    position: absolute;
+    margin: 5rem 0.75rem;
+    font-size: 1.25rem;
+
+    animation: moveInFromBottom 1s ease-out;
+
+    // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    //   rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    // opacity: 1;
+    // transform-style: preserve-3d;
+
+    @include tablet-and-desktop {
+      margin: 12rem 1.75rem;
+      font-size: 3rem;
+    }
+
+    @include desktop {
+      margin: 12rem 1.75rem;
+      font-size: 4rem;
+    }
+  }
+
+  &__paragraph {
+    position: absolute;
+    margin: 7rem 0.75rem;
+    color: $pure-white;
+    font-size: 0.5rem;
+    animation: moveInFromBottom 1s ease-out;
+
+    @include tablet-and-desktop {
+      margin: 16.5rem 1.75rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__button-wrapper {
+    position: absolute;
+    margin: 7.5rem 0.75rem;
+    animation: moveInFromBottom 1s ease-out;
+
+    @include tablet-and-desktop {
+      margin: 18.5rem 1.75rem;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    cursor: pointer;
+    color: $pure-white;
+    background-color: transparent;
+    border: 0.75px solid $pure-white;
+    font-size: 0.375rem;
+    border-radius: 2px;
+
+    @include tablet-and-desktop {
+      font-size: 1rem;
+    }
+  }
+}
