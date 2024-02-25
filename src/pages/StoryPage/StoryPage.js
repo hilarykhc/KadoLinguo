@@ -33,10 +33,29 @@ export default function StoryPage() {
     setCurrentImgId(clickedId);
   };
 
-  // const handleNextPage = () => {
-  //   const nextStoryId = currentImgId + 1;
+  const handleNextPage = () => {
+    const currentIndex = stories.findIndex(
+      (story) => story.id === currentImgId
+    );
+    const nextIndex = (currentIndex + 1) % stories.length;
+    const nextStory = stories[nextIndex];
 
-  // }
+    setCurrentImgId(nextStory.id);
+    setSelectedStory(nextStory);
+    navigate(`/stories/${nextStory.id}`);
+  };
+
+  const handlePrevPage = () => {
+    const currentIndex = stories.findIndex(
+      (story) => story.id === currentImgId
+    );
+    const prevIndex = (currentIndex - 1 + stories.length) % stories.length;
+    const prevStory = stories[prevIndex];
+
+    setCurrentImgId(prevStory.id);
+    setSelectedStory(prevStory);
+    navigate(`/stories/${prevStory.id}`);
+  };
 
   // const filteredStories = stories.filter(
   //   (story) => story.id !== selectedStory.id
@@ -50,8 +69,12 @@ export default function StoryPage() {
       <section className="hero">
         <StoryHero selectedStory={selectedStory} />
         <div className="center__card-btn-wrapper">
-          <button className="center__card-btn">PREV</button>
-          <button className="center__card-btn">NEXT</button>
+          <button className="center__card-btn" onClick={handlePrevPage}>
+            PREV
+          </button>
+          <button className="center__card-btn" onClick={handleNextPage}>
+            NEXT
+          </button>
         </div>
       </section>
       <section className="story__list">
@@ -80,11 +103,8 @@ export default function StoryPage() {
               </article>
             </div>
           ))}
-          {/* <p className="story__list-title">{selectedStory.title}</p> */}
         </div>
       </section>
-      {/* Story component: map through stories // 3 stories with Hero section
-      showing current selected story */}
     </main>
   );
 }
