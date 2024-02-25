@@ -78,24 +78,14 @@ export default function Sequence2() {
     }),
   }));
 
-  //   const addPicToBoard = (item) => {
-  //     const { id: draggedItemId, dropBoxId } = item;
-
-  //     if (dropBoxId !== null) {
-  //       setStoryboard((storyboard) => [
-  //         ...storyboard,
-  //         { id: draggedItemId, dropBoxId },
-  //       ]);
-  //     }
-  //   };
   const addPicToBoard = (id, setStoryboard) => {
     const filteredPicture = pictureList.filter((picture) => id === picture.id);
-    // setStoryboard((storyboard) => [...storyboard, filteredPicture[0]]);
     setStoryboard([filteredPicture[0]]);
-    // setAvailablePics(availablePics.filter((picture) => picture.id !== id));
-    // setAvailablePics((prevPictures) =>
-    //   prevPictures.filter((picture) => picture.id !== id)
-    // );
+
+    // setStoryboard((prevStoryboard) => [
+    //   ...prevStoryboard,
+    //   { ...filteredPicture, text: `1. Rolling Dough` },
+    // ]);
   };
 
   return (
@@ -104,23 +94,20 @@ export default function Sequence2() {
         {/* {dropBoxList.map((dropBox, index) => ( */}
         <div className="storyboard-container2">
           <div className="storyboard" ref={drop1}>
+            {storyboard1.length === 0 && <Picture text="1. Rolling Dough" />}
             {storyboard1.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
-
-              // <DropBox
-              //   key={dropBox.id}
-              //   id={dropBox.id}
-              //   content={dropBox.content}
-              // />
             })}
           </div>
           <div className="storyboard" ref={drop2}>
+            {storyboard1.length === 0 && <Picture text="2. Cutting Apple" />}
             {storyboard2.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
           </div>
 
           <div className="storyboard" ref={drop3}>
+            {storyboard1.length === 0 && <Picture text="3. Cooking Apple" />}
             {storyboard3.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
@@ -128,18 +115,21 @@ export default function Sequence2() {
         </div>
         <div className="storyboard-container3">
           <div className="storyboard" ref={drop4}>
+            {storyboard1.length === 0 && <Picture text="4. Baking Pie" />}
             {storyboard4.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
           </div>
 
           <div className="storyboard" ref={drop5}>
+            {storyboard1.length === 0 && <Picture text="5. Serving Pie" />}
             {storyboard5.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
           </div>
 
           <div className="storyboard" ref={drop6}>
+            {storyboard1.length === 0 && <Picture text="6. Eating Pie" />}
             {storyboard6.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
