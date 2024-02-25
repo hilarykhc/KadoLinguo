@@ -16,6 +16,15 @@
       }
     }
 
+    &-top-heading {
+      padding: 1.5rem 0.75rem 0;
+      font-size: 0.938rem;
+
+      @include desktop {
+        font-size: 2rem;
+      }
+    }
+
     &-subtitle {
       padding: 1rem 0rem;
       font-size: 0.75rem;
@@ -27,6 +36,10 @@
       //   width: 13rem;
       //   margin: 1rem;
       text-align: center;
+
+      @include desktop {
+        font-size: 1.5rem;
+      }
     }
 
     &-content {
@@ -39,9 +52,11 @@
     }
 
     &-img {
-      width: 10rem;
+      width: 60%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       cursor: pointer;
       filter: grayscale(100%);
+      transition: filter 0.3s ease;
 
       &:hover {
         filter: grayscale(0%);
@@ -49,6 +64,10 @@
 
       @include tablet-and-desktop {
         width: 14rem;
+      }
+
+      @include desktop {
+        width: 20rem;
       }
     }
   }

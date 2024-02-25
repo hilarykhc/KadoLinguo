@@ -10,11 +10,19 @@ const titleStyles = {
 export default function AboutOli() {
   return (
     <section className="homepage__about">
+      <div className="homepage__about-top">
+        <div className="homepage__about-top-left">
+          <h2 className="homepage__about-top-heading">Learn About Us.</h2>
+        </div>
+        <div className="homepage__about-top-right">
+          <p className="homepage__about-top-text"></p>
+        </div>
+      </div>
       <div className="homepage__about-container">
         <div className="homepage__about-wrapper">
-          <h2 className="homepage__about-subtitle" style={titleStyles}>
+          <h3 className="homepage__about-subtitle" style={titleStyles}>
             About KādoLinguo
-          </h2>
+          </h3>
           <img
             src={aboutKadolinguo}
             alt="Kadolinguo logo"
@@ -27,9 +35,9 @@ export default function AboutOli() {
           </p>
         </div>
         <div className="homepage__about-wrapper">
-          <h2 className="homepage__about-subtitle" style={titleStyles}>
+          <h3 className="homepage__about-subtitle" style={titleStyles}>
             About Oli
-          </h2>
+          </h3>
           <img
             src={aboutOli}
             alt="Oli and butterfly"
@@ -42,9 +50,9 @@ export default function AboutOli() {
           </p>
         </div>
         <div className="homepage__about-wrapper">
-          <h2 className="homepage__about-subtitle" style={titleStyles}>
+          <h3 className="homepage__about-subtitle" style={titleStyles}>
             Meet the Team
-          </h2>
+          </h3>
           <img src={aboutTeam} alt="Team pic" className="homepage__about-img" />
           <p className="homepage__about-content">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu

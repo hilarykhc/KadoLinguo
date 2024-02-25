@@ -3,7 +3,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-.homepage {
+.homestory {
   // &__img {
   //   background-image: url(../../assets/oli/oli.homepage.png);
   // }
@@ -11,17 +11,11 @@
   &__img {
     object-fit: cover;
     width: -webkit-fill-available;
-    margin-top: 1.975rem;
+    margin-top: 1rem;
     margin-bottom: -0.37rem;
-    // margin: -1.2rem 0 -2rem;
-
-    @include tablet-and-desktop {
-      // margin: -2.25rem 0 -2rem;
-      margin-top: 3.975rem;
-    }
 
     @include desktop {
-      margin-top: 5.515rem;
+      margin-top: 5rem;
     }
   }
 

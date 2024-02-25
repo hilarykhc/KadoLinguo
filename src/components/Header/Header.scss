@@ -14,7 +14,8 @@
     z-index: 1000;
     padding: 0 0.5rem;
     // background-color: rgba(230, 230, 250, 0.5);
-    background-color: rgba(44, 44, 84, 0.5);
+    // background-color: rgba(44, 44, 84, 0.5);
+    background-color: $cool-gray;
     align-items: center;
 
     @include tablet-and-desktop {
@@ -31,11 +32,11 @@
   }
 
   &__logo {
-    width: 1.5rem;
+    width: 2rem;
     text-decoration: none;
 
     @include tablet-and-desktop {
-      width: 3rem;
+      width: 3.5rem;
     }
 
     @include desktop {

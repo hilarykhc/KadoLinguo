@@ -1,0 +1,149 @@
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.homeFlashcards {
+  &__about {
+    &-container {
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @include tablet-and-desktop {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+      }
+    }
+
+    &-top-heading {
+      padding: 1.5rem 0.75rem 0;
+      font-size: 0.938rem;
+
+      @include desktop {
+        font-size: 2rem;
+      }
+    }
+
+    &-subtitle {
+      padding: 1rem 0rem;
+      font-size: 0.75rem;
+      //   border-radius: 0.25rem;
+      //   border: 1px solid $dark-indigo;
+      //   background-color: $dark-indigo;
+      color: $dark-indigo;
+      //   height: 12rem;
+      //   width: 13rem;
+      //   margin: 1rem;
+      text-align: center;
+    }
+
+    &-content {
+      font-size: 0.75rem;
+    }
+
+    &-wrapper {
+      padding: 0 0.5rem;
+      text-align: center;
+    }
+
+    &-img {
+      width: 60%;
+      cursor: pointer;
+      filter: grayscale(100%);
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+
+      @include tablet-and-desktop {
+        width: 14rem;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 2px;
+    border: 1px solid $deep-purple;
+    padding: 2rem;
+    min-height: 8rem;
+    width: 13rem;
+    background-color: $deep-purple;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    filter: grayscale(65%);
+    transition: filter 0.3s ease;
+
+    &:hover {
+      filter: grayscale(40%) opacity(0.5);
+    }
+
+    @include tablet-and-desktop {
+      min-height: 15rem;
+      padding: 3rem;
+    }
+
+    @include desktop {
+      min-height: 25rem;
+      width: 22rem;
+    }
+  }
+
+  &__box-text {
+    color: $light-gray;
+    font-weight: 600;
+    font-size: 0.938rem;
+    text-align: center;
+
+    @include tablet-and-desktop {
+      font-size: 1rem;
+    }
+
+    @include desktop {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__box-link {
+    text-decoration: none;
+  }
+
+  &__box-number {
+    color: $light-gray;
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 0.938rem;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+    @include tablet-and-desktop {
+      font-size: 1rem;
+    }
+
+    @include desktop {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__box-img {
+    position: absolute;
+    right: 1%;
+    bottom: -2%;
+    width: 3rem;
+
+    @include tablet-and-desktop {
+      width: 5rem;
+    }
+
+    @include desktop {
+      width: 8rem;
+    }
+  }
+}
