@@ -6,13 +6,18 @@
 .homepage {
   &__about {
     &-container {
-      padding: 0.5rem 0.75rem;
+      padding: 0 0.75rem 2rem;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
 
       @include tablet-and-desktop {
         flex-wrap: nowrap;
+        padding: 0 0.75rem 3rem;
+      }
+
+      @include desktop {
+        padding: 0 0.75rem 4rem;
       }
     }
 
@@ -20,8 +25,14 @@
       padding: 1.5rem 0.75rem 0;
       font-size: 0.938rem;
 
+      @include tablet-and-desktop {
+        padding: 3rem 1.75rem 0;
+        font-size: 1.313rem;
+      }
+
       @include desktop {
-        font-size: 2rem;
+        padding: 4rem 1.75rem 0;
+        font-size: 2.25rem;
       }
     }
 
@@ -36,14 +47,31 @@
       //   width: 13rem;
       //   margin: 1rem;
       text-align: center;
+      margin: 0;
+
+      @include tablet-and-desktop {
+        font-size: 1rem;
+        margin: 0.5rem 0 0.25rem;
+      }
 
       @include desktop {
-        font-size: 1.5rem;
+        font-size: 1.625rem;
+        margin: 1rem 0 0.5rem;
       }
     }
 
     &-content {
       font-size: 0.75rem;
+      margin: 1rem 0;
+
+      @include tablet-and-desktop {
+        font-size: 0.938rem;
+      }
+
+      @include desktop {
+        margin: 1rem;
+        font-size: 1.5rem;
+      }
     }
 
     &-wrapper {

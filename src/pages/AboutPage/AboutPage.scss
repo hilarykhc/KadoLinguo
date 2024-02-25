@@ -3,25 +3,24 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-.gamepage {
-  &__container {
-    margin: 5rem 2rem 3rem;
+.aboutpage {
+  margin: 3rem 0.75rem 2rem;
 
-    @include tablet-and-desktop {
-      margin: 7.5rem 2rem 3rem;
-    }
+  @include tablet-and-desktop {
+    margin: 6rem 1rem 3rem;
+  }
 
-    @include desktop {
-      margin: 10rem 2rem 3rem;
-    }
+  @include desktop {
+    margin: 9rem 1rem 4rem;
   }
 
   &__heading {
-    padding-bottom: 1rem;
+    padding: 1.5rem 0.25rem 0.75rem;
     font-size: 0.938rem;
 
     @include tablet-and-desktop {
-      font-size: 1.313rem;
+      padding: 1.5rem 0.75rem 0.75rem;
+      font-size: 1.375rem;
     }
 
     @include desktop {

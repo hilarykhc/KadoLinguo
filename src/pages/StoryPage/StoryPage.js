@@ -4,6 +4,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import storyData from "../../data/stories.json";
 import StoryHero from "../../components/StoryHero/StoryHero";
 
+const titleStyles = {
+  animation: "moveInFromBottom 1s ease-out",
+};
+
 export default function StoryPage() {
   const { storyId } = useParams();
   const navigate = useNavigate();
@@ -29,14 +33,26 @@ export default function StoryPage() {
     setCurrentImgId(clickedId);
   };
 
+  // const handleNextPage = () => {
+  //   const nextStoryId = currentImgId + 1;
+
+  // }
+
   // const filteredStories = stories.filter(
   //   (story) => story.id !== selectedStory.id
   // );
 
   return (
-    <main>
+    <main className="story">
+      <h2 className="story__heading" style={titleStyles}>
+        Oli's Journey.
+      </h2>
       <section className="hero">
         <StoryHero selectedStory={selectedStory} />
+        <div className="center__card-btn-wrapper">
+          <button className="center__card-btn">PREV</button>
+          <button className="center__card-btn">NEXT</button>
+        </div>
       </section>
       <section className="story__list">
         <div className="story__list-wrapper">

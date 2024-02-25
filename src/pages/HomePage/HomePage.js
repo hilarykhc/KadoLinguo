@@ -13,11 +13,9 @@ export default function HomePage() {
   return (
     <main className="homepage">
       <HomeHero />
-      <HomeFlashcards />
-
-      <HomeStory />
-
       <AboutOli />
+      <HomeStory />
+      <HomeFlashcards />
     </main>
   );
 }

@@ -102,47 +102,49 @@ export default function Sequence2() {
     <>
       <div className="storyboard-container">
         {/* {dropBoxList.map((dropBox, index) => ( */}
-        <div className="storyboard" ref={drop1}>
-          {storyboard1.map((picture) => {
-            return <Picture url={picture.url} id={picture.id} />;
+        <div className="storyboard-container2">
+          <div className="storyboard" ref={drop1}>
+            {storyboard1.map((picture) => {
+              return <Picture url={picture.url} id={picture.id} />;
 
-            // <DropBox
-            //   key={dropBox.id}
-            //   id={dropBox.id}
-            //   content={dropBox.content}
-            // />
-          })}
-        </div>
-        <div className="storyboard" ref={drop2}>
-          {storyboard2.map((picture) => {
-            return <Picture url={picture.url} id={picture.id} />;
-          })}
-        </div>
+              // <DropBox
+              //   key={dropBox.id}
+              //   id={dropBox.id}
+              //   content={dropBox.content}
+              // />
+            })}
+          </div>
+          <div className="storyboard" ref={drop2}>
+            {storyboard2.map((picture) => {
+              return <Picture url={picture.url} id={picture.id} />;
+            })}
+          </div>
 
-        <div className="storyboard" ref={drop3}>
-          {storyboard3.map((picture) => {
-            return <Picture url={picture.url} id={picture.id} />;
-          })}
+          <div className="storyboard" ref={drop3}>
+            {storyboard3.map((picture) => {
+              return <Picture url={picture.url} id={picture.id} />;
+            })}
+          </div>
         </div>
+        <div className="storyboard-container3">
+          <div className="storyboard" ref={drop4}>
+            {storyboard4.map((picture) => {
+              return <Picture url={picture.url} id={picture.id} />;
+            })}
+          </div>
 
-        <div className="storyboard" ref={drop4}>
-          {storyboard4.map((picture) => {
-            return <Picture url={picture.url} id={picture.id} />;
-          })}
+          <div className="storyboard" ref={drop5}>
+            {storyboard5.map((picture) => {
+              return <Picture url={picture.url} id={picture.id} />;
+            })}
+          </div>
+
+          <div className="storyboard" ref={drop6}>
+            {storyboard6.map((picture) => {
+              return <Picture url={picture.url} id={picture.id} />;
+            })}
+          </div>
         </div>
-
-        <div className="storyboard" ref={drop5}>
-          {storyboard5.map((picture) => {
-            return <Picture url={picture.url} id={picture.id} />;
-          })}
-        </div>
-
-        <div className="storyboard" ref={drop6}>
-          {storyboard6.map((picture) => {
-            return <Picture url={picture.url} id={picture.id} />;
-          })}
-        </div>
-
         {/* ))} */}
       </div>
       <div className="pictures">

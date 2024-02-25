@@ -1,28 +1,33 @@
-#dropZone,
-#oli_storyboard {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  min-height: 200px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
-}
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
 
-#dropBox1,
-#dropBox2,
-#dropBox3,
-#dropBox4,
-#dropBox5,
-#dropBox6 {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  width: 250px;
-  border: 1px solid #aaaaaa;
-  padding: 1rem;
-}
+// #dropZone,
+// #oli_storyboard {
+//   display: flex;
+//   flex-flow: row nowrap;
+//   justify-content: space-evenly;
+//   min-height: 200px;
+//   margin-bottom: 60px;
+//   flex-wrap: wrap;
+// }
+
+// #dropBox1,
+// #dropBox2,
+// #dropBox3,
+// #dropBox4,
+// #dropBox5,
+// #dropBox6 {
+//   display: flex;
+//   flex-flow: column nowrap;
+//   justify-content: center;
+//   align-items: center;
+//   height: 250px;
+//   width: 250px;
+//   border: 1px solid #aaaaaa;
+//   padding: 1rem;
+// }
 
 // img {
 //   height: 200px;
@@ -33,13 +38,27 @@
 .storyboard {
   display: flex;
   flex-wrap: wrap;
-  height: 250px;
-  width: 250px;
+  height: 14rem;
+  width: 14rem;
   border: 1px solid #aaaaaa;
-}
+  padding: 0.5rem;
+  margin: 0.5rem;
 
-.storyboard-container {
-  display: flex;
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &-container2,
+  &-container3 {
+    @include tablet-and-desktop {
+      display: flex;
+    }
+  }
 }
 
 .dropBox {
@@ -47,8 +66,8 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  width: 250px;
+  height: 14rem;
+  width: 14rem;
   border: 1px solid #aaaaaa;
   padding: 1rem;
 }

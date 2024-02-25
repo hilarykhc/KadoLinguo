@@ -1,6 +1,9 @@
 .picture {
-  height: 12rem;
-  object-fit: cover;
-  width: 12rem;
-  margin: 0.65rem;
+  &__img {
+    height: 12rem;
+    object-fit: cover;
+    width: 12rem;
+    margin: 0.3rem;
+    cursor: pointer;
+  }
 }

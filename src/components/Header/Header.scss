@@ -54,6 +54,15 @@
       text-decoration: none;
       padding-left: 0.35rem;
 
+      &:hover {
+        color: $deep-purple;
+      }
+
+      &.active {
+        color: $dark-indigo;
+        font-weight: 700;
+      }
+
       @include tablet-and-desktop {
         font-size: 1.25rem;
         padding-left: 1rem;

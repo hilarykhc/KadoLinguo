@@ -21,7 +21,13 @@
       padding: 1.5rem 0.75rem 0;
       font-size: 0.938rem;
 
+      @include tablet-and-desktop {
+        padding: 3rem 1.75rem 0;
+        font-size: 1.313rem;
+      }
+
       @include desktop {
+        padding: 4rem 1.75rem 0;
         font-size: 2rem;
       }
     }
@@ -70,14 +76,17 @@
     justify-content: center;
     margin: 1rem;
     border-radius: 2px;
-    border: 1px solid $deep-purple;
+    // border: 1px solid $deep-purple;
     padding: 2rem;
     min-height: 8rem;
     width: 13rem;
-    background-color: $deep-purple;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    // background-color: #7980cc;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, $dark-indigo, $butterfly);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    filter: grayscale(65%);
+    // filter: grayscale(65%);
+    filter: grayscale(40%);
     transition: filter 0.3s ease;
 
     &:hover {

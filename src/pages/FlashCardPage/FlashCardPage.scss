@@ -1,0 +1,18 @@
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.flashcard {
+  &__container {
+    margin: 2rem 0.75rem 0;
+
+    @include tablet-and-desktop {
+      margin: 3.5rem 0.75rem 1.5rem;
+    }
+
+    @include desktop {
+      margin: 5.5rem 0.75rem 3rem;
+    }
+  }
+}

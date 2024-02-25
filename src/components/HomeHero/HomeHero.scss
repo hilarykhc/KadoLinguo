@@ -26,9 +26,9 @@
   }
 
   &__title {
-    color: $pure-white;
+    color: $deep-purple;
     position: absolute;
-    margin: 5rem 0.75rem;
+    margin: 4rem 0.75rem;
     font-size: 1.25rem;
     font-weight: 900;
 
@@ -40,54 +40,54 @@
     // transform-style: preserve-3d;
 
     @include tablet-and-desktop {
-      margin: 12rem 1.75rem;
+      margin: 9rem 1.75rem;
       font-size: 3rem;
     }
 
     @include desktop {
-      margin: 19rem 1.75rem;
+      margin: 16rem 1.75rem;
       font-size: 5rem;
     }
   }
 
   &__paragraph {
     position: absolute;
-    margin: 7rem 0.75rem;
-    color: $pure-white;
+    margin: 6rem 0.75rem;
+    color: $deep-purple;
     font-size: 0.5rem;
     animation: moveInFromBottom 1.5s ease-out;
 
     @include tablet-and-desktop {
-      margin: 16.5rem 1.75rem;
+      margin: 13.5rem 1.75rem;
       font-size: 1rem;
     }
 
     @include desktop {
-      margin: 26.5rem 1.75rem;
+      margin: 23.5rem 1.75rem;
       font-size: 1.75rem;
     }
   }
 
   &__button-wrapper {
     position: absolute;
-    margin: 7.5rem 0.75rem;
+    margin: 6.5rem 0.75rem;
     animation: moveInFromBottom 1.5s ease-out;
 
     @include tablet-and-desktop {
-      margin: 18.5rem 1.75rem;
+      margin: 15.5rem 1.75rem;
     }
 
     @include desktop {
-      margin: 29.5rem 1.75rem;
+      margin: 26.5rem 1.75rem;
     }
   }
 
   &__button {
     margin: 0;
     cursor: pointer;
-    color: $pure-white;
+    color: $deep-purple;
     background-color: transparent;
-    border: 0.75px solid $pure-white;
+    border: 0.75px solid $deep-purple;
     font-size: 0.375rem;
     border-radius: 2px;
     transition: filter 0.3s ease;

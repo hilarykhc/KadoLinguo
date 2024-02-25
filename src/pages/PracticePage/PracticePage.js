@@ -114,19 +114,22 @@ export default function PracticePage() {
           <img
             src={currentCard.front}
             alt={currentCard.back}
-            style={{ maxWidth: "100%", height: "100%", objectFit: "cover" }}
+            // style={{ maxWidth: "100%", height: "100%", objectFit: "cover" }}
+            className="center__card-front-img"
           />
         </div>
         <div className="center__card-back">
-          <div>{currentCard.back}</div>
+          <div className="center__card-back-text">{currentCard.back}</div>
         </div>
       </div>
-      <button className="center__card-btn" onClick={handleNextClick}>
-        PREV
-      </button>
-      <button className="center__card-btn" onClick={handleNextClick}>
-        NEXT
-      </button>
+      <div className="center__card-btn-wrapper">
+        <button className="center__card-btn" onClick={handleNextClick}>
+          PREV
+        </button>
+        <button className="center__card-btn" onClick={handleNextClick}>
+          NEXT
+        </button>
+      </div>
     </div>
   );
 }

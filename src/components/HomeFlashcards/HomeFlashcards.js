@@ -1,14 +1,19 @@
 import "./HomeFlashcards.scss";
 import { Link } from "react-router-dom";
-import catLogo from "../../assets/logo/cat.png";
 import cat2Logo from "../../assets/logo/cat2.png";
+
+const titleStyles = {
+  animation: "moveInFromBottom 1s ease-out",
+};
 
 export default function HomeFlashcards() {
   return (
     <section className="homeFlashcards__about">
       <div className="homeFlashcards__about-top">
         <div className="homeFlashcards__about-top-left">
-          <h2 className="homeFlashcards__about-top-heading">Flashcards.</h2>
+          <h2 className="homeFlashcards__about-top-heading" style={titleStyles}>
+            Flashcards.
+          </h2>
         </div>
         <div className="homeFlashcards__about-top-right">
           <p className="homeFlashcards__about-top-text"></p>

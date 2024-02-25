@@ -23,11 +23,39 @@
 // }
 
 .story {
+  margin: 3rem 0.75rem 2rem;
+
+  @include tablet-and-desktop {
+    margin: 6rem 1rem 3rem;
+  }
+
+  @include desktop {
+    margin: 9rem 1rem 4rem;
+  }
+
+  &__heading {
+    padding: 1.5rem 0.25rem 0.75rem;
+    font-size: 0.938rem;
+
+    @include tablet-and-desktop {
+      padding: 1.5rem 0.75rem 0.75rem;
+      font-size: 1.375rem;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+    }
+  }
+
   &__list-wrapper {
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem 1rem;
     flex-wrap: wrap;
+
+    @include tablet-and-desktop {
+      padding: 4rem 2rem 1rem;
+    }
   }
 
   &__list-wrapper-card-img {
@@ -38,65 +66,13 @@
   }
 
   &__list-wrapper-card {
+    position: relative;
     &:hover,
     &.clicked {
+      transform: scale(1.15);
       .story__list-wrapper-card-img {
         filter: grayscale(30%) brightness(80%);
       }
     }
   }
 }
-
-// .story {
-//   &__list-wrapper {
-//     display: flex;
-//     justify-content: space-evenly;
-//     padding: 1rem 5rem;
-//   }
-
-//   &__list-wrapper-card {
-//     position: relative;
-//     overflow: hidden;
-//     transition: transform 0.3s ease-in-out;
-
-//     .story__list-wrapper-card-img {
-//       height: 5rem;
-//       width: 10rem;
-//       cursor: pointer;
-//       transition: filter 0.3s ease-in-out;
-//     }
-
-//     &:hover {
-//       .story__list-wrapper-card-img {
-//         filter: grayscale(30%) brightness(80%);
-//       }
-//     }
-
-//     &.clicked .story__list-wrapper-card-img {
-//       filter: grayscale(30%) brightness(100%);
-//     }
-//   }
-
-//   &__list-wrapper-card2 {
-//     transition: transform 0.3s ease-in-out;
-//   }
-
-//   &__list-overlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background: rgba(0, 0, 0, 0.5);
-//     opacity: 0;
-//     transition: opacity 0.3s ease-in-out;
-//   }
-
-//   &__list-wrapper-card:hover .story__list-wrapper-card2 {
-//     transform: scale(1.1);
-//   }
-
-//   &__list-wrapper-card:hover .story__list-overlay {
-//     opacity: 1;
-//   }
-// }

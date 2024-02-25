@@ -1,3 +1,10 @@
+import AboutOli from "../../components/AboutOli/AboutOli";
+import "./AboutPage.scss";
+
 export default function AboutPage() {
-  return <div>2 components: About KādoLinguo + gif about Oli</div>;
+  return (
+    <section className="aboutpage">
+      <AboutOli />
+    </section>
+  );
 }

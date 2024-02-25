@@ -4,7 +4,14 @@
 
 .center {
   text-align: center;
-  margin: 0 5rem;
+  margin: -3rem 2rem 2rem;
+
+  @include tablet-and-desktop {
+    margin: 4rem 5rem 1.5rem;
+  }
+  @include desktop {
+    margin: 9rem 5rem 3rem;
+  }
 
   &__card {
     perspective: 1000px;
@@ -41,27 +48,110 @@
       // background-size: cover;
       border-radius: 0.25rem;
       height: 30rem;
+
+      &-img {
+        max-height: 15rem;
+        border-radius: 1rem;
+
+        @include tablet-and-desktop {
+          max-height: 20rem;
+        }
+
+        @include desktop {
+          max-height: 25rem;
+        }
+      }
     }
 
     &-back {
       // background-color: #b9dedb;
       // background-color: #c8d9f5;
-      background-color: #fffacd;
+      // background-color: #fffacd;
       border-radius: 0.25rem;
       transform: rotateY(180deg);
       // max-width: 33rem;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $butterfly;
+        width: 15.75rem;
+        height: 14rem;
+        color: $pure-white;
+        border-radius: 1rem;
+        font-weight: 800;
+        filter: grayscale(0.4);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        @include tablet-and-desktop {
+          width: 20.916rem;
+          height: 20rem;
+        }
+
+        @include desktop {
+          width: 26.145rem;
+          height: 25rem;
+        }
+      }
     }
+  }
+
+  &__card-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
   }
 
   &__card-btn {
-    margin-top: 2rem;
     cursor: pointer;
-    background-color: #f0f0f0;
-    border: 1px solid #f0f0f0;
-    color: #808080;
+    padding: 0.15rem 0.3rem;
+    // background-color: $cool-gray;
+    // background: linear-gradient(45deg, $light-gray, $pure-white);
+    background: $lavender;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 0.5px solid $deep-purple;
+    border-radius: 2px;
+    color: $deep-purple;
+    // filter: grayscale(0.4);
+    filter: opacity(0.8);
+    transition: filter 0.3s ease;
+    font-size: 0.438rem;
 
     &:hover {
-      background-color: #b9dedb;
+      background: $deep-purple;
+      color: $cool-gray;
+      border-color: $cool-gray;
+      filter: grayscale(65%) opacity(0.8);
+    }
+
+    @include tablet-and-desktop {
+      border: 1px solid $deep-purple;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.688rem;
+    }
+
+    @include desktop {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
     }
   }
+
+  // &__card-front-img {
+  //   max-height: 15rem;
+  //   border-radius: 1rem;
+
+  //   @include tablet-and-desktop {
+  //     max-height: 20rem;
+  //   }
+
+  //   @include desktop {
+  //     max-height: 25rem;
+  //   }
+  // }
 }

@@ -12,7 +12,7 @@ export default function Picture({ id, url, dropBoxId }) {
   return (
     <img
       ref={drag}
-      className="picture"
+      className="picture__img"
       src={url}
       style={{ border: isDragging ? "5px solid pink" : "0px" }}
     />
