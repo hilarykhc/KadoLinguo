@@ -16,7 +16,7 @@ export default function HomeHero() {
           <h1 className="homepage__title">KādoLinguo</h1>
           <p className="homepage__paragraph">Learning made easy.</p>
           <div className="homepage__button-wrapper">
-            <Link to="/flashcards">
+            <Link to="/about">
               <button className="homepage__button"> MEET OLI</button>
             </Link>
           </div>

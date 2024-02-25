@@ -15,6 +15,19 @@ export default function GamePage() {
         <h2 className="gamepage__heading" style={titleStyles}>
           Matchy-Matchy.
         </h2>
+        <div className="gamepage__intro-container">
+          <p className="gamepage__intro1">
+            Hey there, culinary enthusiasts! Our friend Oli is feeling a bit
+            peckish and has a hankering for a delicious homemade apple pie. Oli
+            is ready to embark on this delightful culinary journey, but needs
+            your expertise to ensure the apple pie turns out perfect. Are you up
+            for the challenge?
+          </p>
+          <p className="gamepage__intro2">
+            Help Oli figure out the sequence of making the apple pie by dragging
+            and dropping the respsective images into the boxes.
+          </p>
+        </div>
         <Sequence2 />
       </section>
     </DndProvider>
