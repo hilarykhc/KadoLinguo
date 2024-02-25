@@ -6,5 +6,16 @@
 .hero {
   &__img {
     width: 100%;
+    border: 16px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    @include tablet-and-desktop {
+      border: 30px solid #e0e0e0;
+    }
+
+    @include desktop {
+      border: 50px solid #e0e0e0;
+    }
   }
 }
