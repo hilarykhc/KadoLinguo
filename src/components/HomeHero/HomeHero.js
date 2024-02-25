@@ -12,7 +12,7 @@ export default function HomeHero() {
   return (
     <section className="homepage__hero">
       <div className="homepage__hero-container">
-        <div className="hoomepage__content" style={titleStyles}>
+        <div className="homepage__content" style={titleStyles}>
           <h1 className="homepage__title">KādoLinguo</h1>
           <p className="homepage__paragraph">Learning made easy.</p>
           <div className="homepage__button-wrapper">
