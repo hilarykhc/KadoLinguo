@@ -67,7 +67,10 @@ export default function StoryPage() {
         Oli's Journey.
       </h2>
       <section className="hero">
-        <StoryHero selectedStory={selectedStory} />
+        <StoryHero
+          selectedStory={selectedStory}
+          handleNextPage={handleNextPage}
+        />
         <div className="center__card-btn-wrapper">
           <button className="center__card-btn" onClick={handlePrevPage}>
             PREV

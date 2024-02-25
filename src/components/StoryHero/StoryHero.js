@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./StoryHero.scss";
 import { Link, useParams } from "react-router-dom";
 
-export default function StoryHero({ selectedStory }) {
+export default function StoryHero({ selectedStory, handleNextPage }) {
   const { storyId } = useParams();
   const [currentStoryId, setCurrentStoryId] = useState([storyId]);
   // const [currentStoryId, setCurrentStoryId] = useState(parseInt(storyId, 10));
@@ -20,7 +20,7 @@ export default function StoryHero({ selectedStory }) {
   // };
 
   return (
-    <div className="hero">
+    <div className="hero" onClick={() => handleNextPage(getNextStoryId())}>
       <Link to={`/stories/${getNextStoryId()}`}>
         <img
           className="hero__img"
