@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
         <div className="footer__wrapper-bottom">
           <div className="footer__wrapper-bottom-center">
-            <p className="footer__collabs">Made with Kādolinguo x Oli © 2024</p>
+            <p className="footer__collabs">Made by Kādolinguo x Oli © 2024</p>
           </div>
         </div>
 
