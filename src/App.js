@@ -23,6 +23,7 @@ export default function App() {
         <Route path="/flashcards/practice" element={<PracticePage />} />
         <Route path="/flashcards/practice/:cardId" element={<PracticePage />} />
         <Route path="/flashcards/quiz" element={<QuizPage />} />
+        <Route path="/flashcards/quiz/:cardId" element={<QuizPage />} />
         <Route path="/flashcards/game" element={<GamePage />} />
       </Routes>
       <Footer />

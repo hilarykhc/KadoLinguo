@@ -19,6 +19,7 @@
   &__heading {
     padding-bottom: 1rem;
     font-size: 0.938rem;
+    padding-top: 0;
 
     @include tablet-and-desktop {
       font-size: 1.313rem;

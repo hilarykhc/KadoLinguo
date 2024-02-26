@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "What kind of animal is Oli ?",
+    "choices": ["dog", "cat"],
+    "correctAnswer": "cat"
+  },
+  {
+    "id": 2,
+    "question": "Where is Oli's favourite nap spot?",
+    "choices": ["on the grass", "by the beach"],
+    "correctAnswer": "on the grass"
+  },
+  {
+    "id": 3,
+    "question": "Which fruit does Oli like to pick from the trees?",
+    "choices": ["apples", "oranges"],
+    "correctAnswer": "apples"
+  },
+  {
+    "id": 4,
+    "question": "What does Oli do when spotting a butterfly?",
+    "choices": ["watches from a distance", "starts chasing playfully"],
+    "correctAnswer": "starts chasing playfully"
+  },
+  {
+    "id": 5,
+    "question": "How does Oli feel about exploring new places?",
+    "choices": ["excited", "cautious"],
+    "correctAnswer": "excited"
+  }
+]

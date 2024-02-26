@@ -1,0 +1,73 @@
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.quiz {
+  &__container {
+    background-image: url("../../assets/oli/quiz_background.jpg");
+    filter: opacity(0.8);
+
+    @include tablet-and-desktop {
+      margin-top: 3.95rem;
+    }
+
+    @include desktop {
+      height: 40rem;
+    }
+  }
+
+  &__content,
+  &__response {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__question {
+    font-size: 1.25rem;
+
+    @include tablet-and-desktop {
+      font-size: 2rem;
+    }
+
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__choices-btn {
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.15rem 0.3rem;
+    // background-color: $cool-gray;
+    // background: linear-gradient(45deg, $light-gray, $pure-white);
+    background: $lavender;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 0.5px solid $deep-purple;
+    border-radius: 2px;
+    color: $deep-purple;
+    // filter: grayscale(0.4);
+    filter: opacity(0.8);
+    transition: filter 0.3s ease;
+
+    &:hover {
+      background: $deep-purple;
+      color: $cool-gray;
+      border-color: $cool-gray;
+      filter: grayscale(65%) opacity(0.8);
+    }
+
+    @include tablet-and-desktop {
+      border: 1px solid $deep-purple;
+      padding: 0.35rem 0.65rem;
+      font-size: 1.25rem;
+    }
+
+    @include desktop {
+      padding: 0.5rem 1rem;
+      font-size: 2rem;
+    }
+  }
+}
