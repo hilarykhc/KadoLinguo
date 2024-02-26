@@ -11,8 +11,6 @@ const Quiz = () => {
     if (selectedAnswer === quizData[currentQuestion].correctAnswer) {
       setScore(score + 1);
     }
-
-    // Move to the next question
     setCurrentQuestion(currentQuestion + 1);
   };
 
