@@ -25,7 +25,7 @@ This app allows users to access inspiring stories and ready-made flashcards, qui
 3. Visual association for better retention:
 
 - Traditional way of memorizing vocabulary and sentences can be challenging without proper context or visual aidds.
-- KādoLinguo offers card pairing game to enhance visual association and reinforce vocabulary.
+- KādoLinguo offers card matching game to enhance visual association and reinforce vocabulary.
 - This can significantly enhance memory retention and make the learning process more effective.
 
 ### User Profile
@@ -44,13 +44,13 @@ Language learners at all ages can benefit from KādoLinguo.
 
 3. Quiz Mode
 
-- Implement a quiz mode where users can go through their flashcards and test their knowledge.
-- Provide instant feedback on correct/incorrect answers.
+- Implement a quiz mode where users can test their knowledge about story comprehension.
+- Provide feedback on the number of correct/incorrect answers.
 
 4. Game Mode
 
 - Introduce an interactive card game to reinforce vocabulary/phrase through visual association.
-- Display a grid of cards with images and corresponding words/phrases, and users need to find matching pairs.
+- Display a grid of cards with images and corresponding words/phrases in the drop box. Users need to find matching pairs by drag-and-drop the images into the drop box.
 
 ## Implementation
 
@@ -86,27 +86,30 @@ List the pages of your app with brief descriptions. You can show this visually, 
 
 ### Mockups
 
-![oli homepage](./src/assets/oli/oli_home2.png)
-![olixkado](./src/assets/oli/oli_home.jpg)
-![homepage](./src/assets/home.png)
-![about](./src/assets/about.png)
-![Kadolinguo](./src/assets/about2.png)
-![explore](./src/assets/explore.png)
-![explore2](./src/assets/explore2.png)
-![practice](./src/assets/practice.png)
-![quiz](./src/assets/quiz.png)
-![card pairing](./src/assets/card%20pairing.png)
-![add card](./src/assets/add%20card2.png)
-![edit card](./src/assets/edit%20card2.png)
-![connect](./src/assets/contact.png)
+##### Home
+
+![home1](./src/assets//readme/home.png)
+![home2](./src/assets//readme/home2.png)
+![home3](./src/assets//readme/home3.png)
+
+### Story
+
+![story](./src/assets/readme/story.png)
 
 ### Cards
 
-![confused](./src/assets/oli/oli.%20confused.jpg)
-![happy](./src/assets/oli/oli.%20happy.jpg)
-![scared](./src/assets/oli/oli.scared.jpg)
-![take photo](./src/assets/oli/oli.take%20photo.jpg)
-![take nap](./src/assets/oli/oli.%20take%20a%20nap.jpg)
+##### Practice Mode
+
+![card1](./src/assets/readme/card1.png)
+![card2](./src/assets/readme/card2.png)
+
+##### Quiz Mode
+
+![quiz1](./src/assets/readme/quiz1.png)
+
+##### Game Mode
+
+![game1](./src/assets/readme/game1.png)
 
 ### Data
 
@@ -149,3 +152,74 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 - Implement user authentication to enable personalized experiences.
 - Users can create accounts, log in, and securely access their personalized decks, progress, and settings.
 - Ensure that user data is securely stored and encrypted.
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
