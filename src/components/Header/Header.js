@@ -23,7 +23,6 @@ export default function Header() {
           />
         </Link>
 
-        {/* <div> */}
         <div className="header__nav">
           <Link to="/" className={`header__nav-item ${isActive("/")}`}>
             Home
@@ -47,7 +46,6 @@ export default function Header() {
             Flashcards
           </Link>
         </div>
-        {/* </div> */}
       </section>
     </header>
   );

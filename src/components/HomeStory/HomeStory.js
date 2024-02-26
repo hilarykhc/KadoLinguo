@@ -4,10 +4,6 @@ import storyHome2 from "../../assets/story/story5.jpg";
 import "./HomeStory.scss";
 import { Link } from "react-router-dom";
 
-// const titleStyles = {
-//   animation: "moveInFromBottom 1s ease-out",
-// };
-
 export default function HomeStory() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [initialRender, setInitialRender] = useState(true);
@@ -37,7 +33,6 @@ export default function HomeStory() {
       : isScrolled
       ? "moveInFromBottom 1s ease-out"
       : "none",
-    // animationFillMode: isScrolled ? "forwards" : "none",
   };
 
   return (
@@ -53,7 +48,6 @@ export default function HomeStory() {
           </div>
         </div>
 
-        {/* <img className="homestory__img" src={storyHome} /> */}
         <img className="homestory__img" src={storyHome} />
       </div>
     </section>

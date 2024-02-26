@@ -54,28 +54,6 @@ export default function PracticePage() {
     getSingleCard();
   }, [cardId]);
 
-  // function renderFrontImage(front) {
-  //   if (front && front.type === "Buffer") {
-  //     const imageSrc = `data:image/png;base64,${arrayBufferToBase64(
-  //       front.data.data
-  //     )}`;
-  //     console.log(imageSrc);
-  //     return <img src={imageSrc} alt="Front Image" />;
-  //   } else {
-  //     return <span>{front}</span>;
-  //   }
-  // }
-
-  // function arrayBufferToBase64(buffer) {
-  //   let binary = "";
-  //   const bytes = new Uint8Array(buffer);
-  //   bytes.forEach((byte) => {
-  //     binary += String.fromCharCode(byte);
-  //   });
-  //   console.log(bytes);
-  //   return btoa(binary);
-  // }
-
   const handleNextClick = () => {
     const nextCardId = currentCardId + 1;
     setCurrentCardId(nextCardId);
@@ -121,7 +99,6 @@ export default function PracticePage() {
           <img
             src={currentCard.front}
             alt={currentCard.back}
-            // style={{ maxWidth: "100%", height: "100%", objectFit: "cover" }}
             className="center__card-front-img"
           />
         </div>
@@ -140,45 +117,3 @@ export default function PracticePage() {
     </div>
   );
 }
-
-// ------------------------------------------------
-
-// const { cardId } = useParams();
-// const [currentCardId, setCurrentCardId] = useState(parseInt(cardId || 1));
-// const [currentCard, setCurrentCard] = useState(null);
-// const [allCards, setAllCards] = useState([]);
-// const [loading, setLoading] = useState(true);
-// const [isFlipped, setIsFlipped] = useState(false); // New state for flip
-// const navigate = useNavigate(); //to navigate to homepage when we are out of cards
-
-// useEffect(() => {
-//   const fetchCards = async () => {
-//     try {
-//       const response = await axios.get(
-//         `${REACT_APP_SERVER_URL}/cards/${currentCardId}`
-//       );
-//       setCurrentCard(response.data);
-//     } catch (error) {
-//       console.error(error);
-//       setCurrentCard(null);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-//   fetchCards();
-// }, [cardId, currentCardId]);
-
-// const getAllCards = async () => {
-//   try {
-//     const response = await axios.get(`${REACT_APP_SERVER_URL}/cards`);
-//     setAllCards(response.data);
-//   } catch (error) {
-//     console.error("Error fetching flashcard data:", error);
-//   }
-// };
-
-// useEffect(() => {
-//   getAllCards();
-// }, [cardId]);
-
-//---------------------------------------------

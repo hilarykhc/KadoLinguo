@@ -4,19 +4,13 @@
 @use "../../styles/partials/typography" as *;
 
 .homepage {
-  // &__img {
-  //   background-image: url(../../assets/oli/oli.homepage.png);
-  // }
-
   &__img {
     object-fit: cover;
     width: -webkit-fill-available;
     margin-top: 1.975rem;
     margin-bottom: -0.37rem;
-    // margin: -1.2rem 0 -2rem;
 
     @include tablet-and-desktop {
-      // margin: -2.25rem 0 -2rem;
       margin-top: 3.975rem;
     }
 
@@ -33,11 +27,6 @@
     font-weight: 900;
 
     animation: moveInFromBottom 1.5s ease-out;
-
-    // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    //   rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    // opacity: 1;
-    // transform-style: preserve-3d;
 
     @include tablet-and-desktop {
       margin: 9rem 1.75rem;

@@ -23,16 +23,5 @@ export default function Picture({ id, url, dropBoxId, text }) {
         {!url && <p className="placeholder-text">{text}</p>}
       </div>
     </div>
-    // <div className="picture__container">
-    //   {url && (
-    //     <img
-    //       ref={drag}
-    //       className="picture__img"
-    //       src={url}
-    //       style={{ border: isDragging ? "5px solid pink" : "0px" }}
-    //     />
-    //   )}
-    //   {!url && <p className="placeholder-text">{text}</p>}
-    // </div>
   );
 }

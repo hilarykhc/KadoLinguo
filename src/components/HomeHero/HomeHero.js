@@ -22,9 +22,7 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* <img className="mockup" src={oliHomePage} /> */}
         <img className="homepage__img" src={newHomeHero} />
-        {/* <h1 className="homepage__title">KādoLinguo</h1> */}
       </div>
     </section>
   );

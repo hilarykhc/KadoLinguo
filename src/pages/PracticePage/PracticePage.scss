@@ -18,7 +18,7 @@
     transition: transform 0.5s;
     transform-style: preserve-3d;
     margin-top: 2rem;
-    // background-image: url("../../assets/sea.jpg");
+
     height: 30rem;
     background-size: cover;
     border-radius: 0.25rem;
@@ -41,11 +41,6 @@
     }
 
     &-front {
-      // background-color: #e6e6fa;
-      // background-color: #d0c8da;
-      // background-color: #fffacd;
-      // background-image: url("../../assets/sea.jpg");
-      // background-size: cover;
       border-radius: 0.25rem;
       height: 30rem;
 
@@ -64,12 +59,9 @@
     }
 
     &-back {
-      // background-color: #b9dedb;
-      // background-color: #c8d9f5;
-      // background-color: #fffacd;
       border-radius: 0.25rem;
       transform: rotateY(180deg);
-      // max-width: 33rem;
+
       max-width: 100%;
       height: 100%;
       object-fit: cover;
@@ -111,14 +103,13 @@
   &__card-btn {
     cursor: pointer;
     padding: 0.15rem 0.3rem;
-    // background-color: $cool-gray;
-    // background: linear-gradient(45deg, $light-gray, $pure-white);
+
     background: $lavender;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border: 0.5px solid $deep-purple;
     border-radius: 2px;
     color: $deep-purple;
-    // filter: grayscale(0.4);
+
     filter: opacity(0.8);
     transition: filter 0.3s ease;
     font-size: 0.438rem;
@@ -141,17 +132,4 @@
       font-size: 1rem;
     }
   }
-
-  // &__card-front-img {
-  //   max-height: 15rem;
-  //   border-radius: 1rem;
-
-  //   @include tablet-and-desktop {
-  //     max-height: 20rem;
-  //   }
-
-  //   @include desktop {
-  //     max-height: 25rem;
-  //   }
-  // }
 }

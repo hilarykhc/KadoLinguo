@@ -6,7 +6,7 @@ KādoLinguo is an application to help users enhance language skills through stor
 
 KādoLinguo allows users to unwrap and explore “linguistic gifts” consisting of inspiring stories, personalized vocabulary and sentences via flashcards.
 
-This app allows users to access inspiring stories and ready-made flashcards, quiz themselves, and engage in an interactive card pairing game.
+This app allows users to access inspiring stories and ready-made flashcards, quiz themselves, and engage in an interactive card matching game.
 
 ### Problem
 

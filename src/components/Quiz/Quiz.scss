@@ -41,14 +41,13 @@
     cursor: pointer;
     font-size: 0.875rem;
     padding: 0.15rem 0.3rem;
-    // background-color: $cool-gray;
-    // background: linear-gradient(45deg, $light-gray, $pure-white);
+
     background: $lavender;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border: 0.5px solid $deep-purple;
     border-radius: 2px;
     color: $deep-purple;
-    // filter: grayscale(0.4);
+
     filter: opacity(0.8);
     transition: filter 0.3s ease;
 

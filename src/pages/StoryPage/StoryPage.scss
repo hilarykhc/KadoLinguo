@@ -3,25 +3,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typography" as *;
 
-// .hero {
-//   border: 1px solid;
-//   height: 10rem;
-// }
-
-// .story {
-//   &__list {
-//     display: flex;
-//     justify-content: space-evenly;
-//     list-style-type: none;
-
-//     &-item {
-//       border: 1px solid;
-//       width: 4rem;
-//       height: 5rem;
-//     }
-//   }
-// }
-
 .story {
   margin: 3rem 0.75rem 2rem;
 

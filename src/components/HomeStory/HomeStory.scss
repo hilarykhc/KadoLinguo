@@ -4,10 +4,6 @@
 @use "../../styles/partials/typography" as *;
 
 .homestory {
-  // &__img {
-  //   background-image: url(../../assets/oli/oli.homepage.png);
-  // }
-
   &__img {
     object-fit: cover;
     width: -webkit-fill-available;
@@ -27,11 +23,6 @@
     font-weight: 900;
 
     animation: moveInFromBottom 1.5s ease-out;
-
-    // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    //   rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    // opacity: 1;
-    // transform-style: preserve-3d;
 
     @include tablet-and-desktop {
       margin: 7rem 1.75rem;

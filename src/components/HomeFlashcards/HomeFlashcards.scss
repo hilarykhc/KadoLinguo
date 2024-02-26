@@ -35,13 +35,9 @@
     &-subtitle {
       padding: 1rem 0rem;
       font-size: 0.75rem;
-      //   border-radius: 0.25rem;
-      //   border: 1px solid $dark-indigo;
-      //   background-color: $dark-indigo;
+
       color: $dark-indigo;
-      //   height: 12rem;
-      //   width: 13rem;
-      //   margin: 1rem;
+
       text-align: center;
     }
 
@@ -76,16 +72,15 @@
     justify-content: center;
     margin: 1rem;
     border-radius: 2px;
-    // border: 1px solid $deep-purple;
+
     padding: 2rem;
     min-height: 8rem;
     width: 13rem;
-    // background-color: #7980cc;
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
     background: linear-gradient(45deg, $dark-indigo, $butterfly);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    // filter: grayscale(65%);
+
     filter: grayscale(40%);
     transition: filter 0.3s ease;
 

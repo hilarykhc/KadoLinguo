@@ -57,10 +57,6 @@ export default function StoryPage() {
     navigate(`/stories/${prevStory.id}`);
   };
 
-  // const filteredStories = stories.filter(
-  //   (story) => story.id !== selectedStory.id
-  // );
-
   return (
     <main className="story">
       <h2 className="story__heading" style={titleStyles}>

@@ -5,7 +5,6 @@ import { Link, useParams } from "react-router-dom";
 export default function StoryHero({ selectedStory, handleNextPage }) {
   const { storyId } = useParams();
   const [currentStoryId, setCurrentStoryId] = useState([storyId]);
-  // const [currentStoryId, setCurrentStoryId] = useState(parseInt(storyId, 10));
 
   useEffect(() => {
     setCurrentStoryId(storyId);
@@ -14,10 +13,6 @@ export default function StoryHero({ selectedStory, handleNextPage }) {
   const getNextStoryId = () => {
     return parseInt(currentStoryId, 10) + 1;
   };
-
-  // const getNextStoryId = () => {
-  //   return currentStoryId + 1;
-  // };
 
   return (
     <div className="hero" onClick={() => handleNextPage(getNextStoryId())}>

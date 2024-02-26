@@ -44,10 +44,6 @@ export default function Footer() {
             <p className="footer__collabs">Made by Kādolinguo x Oli © 2024</p>
           </div>
         </div>
-
-        {/* <p>Connect with us: </p>
-      <p>hello@kadolinguo.com</p>
-      <p>123-456-7890</p> */}
       </div>
     </footer>
   );
