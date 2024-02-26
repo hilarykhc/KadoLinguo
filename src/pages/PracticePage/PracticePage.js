@@ -83,6 +83,13 @@ export default function PracticePage() {
     navigate(`/flashcards/practice/${nextCardId}`);
   };
 
+  const handlePrevClick = () => {
+    const nextCardId = currentCardId - 1;
+    setCurrentCardId(nextCardId);
+    setIsFlipped(false); // reset flip
+    navigate(`/flashcards/practice/${nextCardId}`);
+  };
+
   const handleCardClick = () => {
     setIsFlipped(!isFlipped); // toggle flip
   };
@@ -123,7 +130,7 @@ export default function PracticePage() {
         </div>
       </div>
       <div className="center__card-btn-wrapper">
-        <button className="center__card-btn" onClick={handleNextClick}>
+        <button className="center__card-btn" onClick={handlePrevClick}>
           PREV
         </button>
         <button className="center__card-btn" onClick={handleNextClick}>

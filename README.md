@@ -47,10 +47,10 @@ Language learners at all ages can benefit from KādoLinguo.
 - Implement a quiz mode where users can go through their flashcards and test their knowledge.
 - Provide instant feedback on correct/incorrect answers.
 
-4. Card Pairing Game Mode
+4. Game Mode
 
-- Introduce an interactive card pairing game to reinforce vocabulary through visual association.
-- Display a grid of cards with images and words, and users need to find matching pairs by selecting two cards consecutively.
+- Introduce an interactive card game to reinforce vocabulary/phrase through visual association.
+- Display a grid of cards with images and corresponding words/phrases, and users need to find matching pairs.
 
 ## Implementation
 
@@ -63,15 +63,14 @@ List technologies that will be used in your app, including any libraries to save
 - Node.js
 - Express.js
 - Database
-- Local storage
-- Responsive (tablet and desktop)
+- Responsive
 
 ### APIs
 
 List any external sources of data that will be used in your app.
 
 - Story series with Oli
-  ![storybook snippet](./assets/oli/oli.story.jpg)
+  ![storybook snippet](./src/assets/oli/oli.story.jpg)
 
 ### Sitemap
 
@@ -83,7 +82,7 @@ List the pages of your app with brief descriptions. You can show this visually, 
   - Flashcards
     - practice
     - quiz (multiple choice)
-    - card pairing game
+    - card game
 
 ### Mockups
 
