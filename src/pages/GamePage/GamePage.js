@@ -11,9 +11,7 @@ export default function GamePage() {
   return (
     <DndProvider backend={HTML5Backend}>
       <section className="gamepage__container">
-        <h2 className="gamepage__heading" style={titleStyles}>
-          Matchy-Matchy.
-        </h2>
+        <h2 className="gamepage__heading">Matchy-Matchy.</h2>
         <div className="gamepage__intro-container">
           <p className="gamepage__intro1">
             Hey there, culinary enthusiasts! Our friend Oli is feeling a bit

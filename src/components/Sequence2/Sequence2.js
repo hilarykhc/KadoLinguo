@@ -7,6 +7,7 @@ import Picture from "../Picture/Picture";
 import DropBox from "../DropBox/DropBox";
 
 export default function Sequence2() {
+  const [storyboard0, setStoryboard0] = useState([]);
   const [storyboard1, setStoryboard1] = useState([]);
   const [storyboard2, setStoryboard2] = useState([]);
   const [storyboard3, setStoryboard3] = useState([]);
@@ -72,20 +73,20 @@ export default function Sequence2() {
       <div className="storyboard-container">
         <div className="storyboard-container2">
           <div className="storyboard" ref={drop1}>
-            {storyboard1.length === 0 && <Picture text="1. Rolling Dough" />}
+            {storyboard0.length === 0 && <Picture text="1. Rolling Dough" />}
             {storyboard1.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
           </div>
           <div className="storyboard" ref={drop2}>
-            {storyboard1.length === 0 && <Picture text="2. Cutting Apple" />}
+            {storyboard0.length === 0 && <Picture text="2. Cutting Apple" />}
             {storyboard2.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
           </div>
 
           <div className="storyboard" ref={drop3}>
-            {storyboard1.length === 0 && <Picture text="3. Cooking Apple" />}
+            {storyboard0.length === 0 && <Picture text="3. Cooking Apple" />}
             {storyboard3.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
@@ -93,21 +94,21 @@ export default function Sequence2() {
         </div>
         <div className="storyboard-container3">
           <div className="storyboard" ref={drop4}>
-            {storyboard1.length === 0 && <Picture text="4. Baking Pie" />}
+            {storyboard0.length === 0 && <Picture text="4. Baking Pie" />}
             {storyboard4.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
           </div>
 
           <div className="storyboard" ref={drop5}>
-            {storyboard1.length === 0 && <Picture text="5. Serving Pie" />}
+            {storyboard0.length === 0 && <Picture text="5. Serving Pie" />}
             {storyboard5.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
           </div>
 
           <div className="storyboard" ref={drop6}>
-            {storyboard1.length === 0 && <Picture text="6. Eating Pie" />}
+            {storyboard0.length === 0 && <Picture text="6. Eating Pie" />}
             {storyboard6.map((picture) => {
               return <Picture url={picture.url} id={picture.id} />;
             })}
