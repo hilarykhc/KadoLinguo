@@ -1,11 +1,8 @@
+import { ToastContainer } from "react-toastify";
 import Sequence2 from "../../components/Sequence2/Sequence2";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 import "./GamePage.scss";
-
-const titleStyles = {
-  animation: "moveInFromBottom 1s ease-out",
-};
 
 export default function GamePage() {
   return (
@@ -26,6 +23,11 @@ export default function GamePage() {
           </p>
         </div>
         <Sequence2 />
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+        />
       </section>
     </DndProvider>
   );

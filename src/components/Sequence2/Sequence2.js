@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState, useEffect } from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+
 import "./Sequence2.scss";
 import pictureList from "../../data/sequence.json";
 import Picture from "../Picture/Picture";
@@ -14,10 +17,13 @@ export default function Sequence2() {
   const [storyboard4, setStoryboard4] = useState([]);
   const [storyboard5, setStoryboard5] = useState([]);
   const [storyboard6, setStoryboard6] = useState([]);
+  const [correctImages, setCorrectImages] = useState([]);
+
+  // const [droppedImgs, setDroppedImgs] = useState([]);
 
   const [{ isOver: isOver1 }, drop1] = useDrop(() => ({
     accept: "image",
-    drop: (item) => addPicToBoard(item.id, setStoryboard1),
+    drop: (item) => addPicToBoard(item.id, setStoryboard1, drop1),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
@@ -25,7 +31,7 @@ export default function Sequence2() {
 
   const [{ isOver: isOver2 }, drop2] = useDrop(() => ({
     accept: "image",
-    drop: (item) => addPicToBoard(item.id, setStoryboard2),
+    drop: (item) => addPicToBoard(item.id, setStoryboard2, drop2),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
@@ -33,7 +39,7 @@ export default function Sequence2() {
 
   const [{ isOver: isOver3 }, drop3] = useDrop(() => ({
     accept: "image",
-    drop: (item) => addPicToBoard(item.id, setStoryboard3),
+    drop: (item) => addPicToBoard(item.id, setStoryboard3, drop3),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
@@ -41,7 +47,7 @@ export default function Sequence2() {
 
   const [{ isOver: isOver4 }, drop4] = useDrop(() => ({
     accept: "image",
-    drop: (item) => addPicToBoard(item.id, setStoryboard4),
+    drop: (item) => addPicToBoard(item.id, setStoryboard4, drop4),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
@@ -49,7 +55,7 @@ export default function Sequence2() {
 
   const [{ isOver: isOver5 }, drop5] = useDrop(() => ({
     accept: "image",
-    drop: (item) => addPicToBoard(item.id, setStoryboard5),
+    drop: (item) => addPicToBoard(item.id, setStoryboard5, drop5),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
@@ -57,19 +63,119 @@ export default function Sequence2() {
 
   const [{ isOver: isOver6 }, drop6] = useDrop(() => ({
     accept: "image",
-    drop: (item) => addPicToBoard(item.id, setStoryboard6),
+    drop: (item) => addPicToBoard(item.id, setStoryboard6, drop6),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   }));
 
-  const addPicToBoard = (id, setStoryboard) => {
-    const filteredPicture = pictureList.filter((picture) => id === picture.id);
-    setStoryboard([filteredPicture[0]]);
+  const addPicToBoard = (id, setStoryboard, dropRef) => {
+    console.log(`Image with id ${id} dropped into ${dropRef}`);
+    const filteredPicture = pictureList.find((picture) => id === picture.id);
+    setStoryboard([filteredPicture]);
+
+    if (dropRef) {
+      const isImageCorrect = checkImage(id, dropRef);
+      if (isImageCorrect) {
+        // setCorrectImages((prev) => [...prev, id]);
+        setCorrectImages((prev) => {
+          const updatedArray = [...prev, id];
+
+          // if (updatedArray.length === pictureList.length) {
+          //   toast.success(
+          //     "Yay! Thank you for helping Oli bake the apple pie. It's delicious!"
+          //   );
+          // }
+          return updatedArray;
+        });
+      }
+    }
   };
+
+  const checkImage = (id, dropRef) => {
+    switch (dropRef) {
+      case drop1:
+        return id === 4;
+      case drop2:
+        return id === 6;
+      case drop3:
+        return id === 3;
+      case drop4:
+        return id === 1;
+      case drop5:
+        return id === 5;
+      case drop6:
+        return id === 2;
+      default:
+        return false;
+    }
+  };
+
+  useEffect(() => {
+    //check if all correct images are dropped
+    if (correctImages.length === pictureList.length) {
+      toast.success(
+        "Yay! Thank you for helping Oli bake the apple pie. It's super delicious! 😋"
+      );
+    }
+  }, [correctImages]);
+
+  // const addPicToBoard = (id, setStoryboard) => {
+  //   const filteredPicture = pictureList.filter((picture) => id === picture.id);
+  //   setStoryboard([filteredPicture[0]]);
+  // };
+
+  // const addPicToBoard = (id, setStoryboard, dropRef) => {
+  //   console.log(`Image with id ${id} dropped into ${dropRef}`);
+  //   const filteredPicture = pictureList.find((picture) => id === picture.id);
+  //   setStoryboard([filteredPicture]);
+
+  //   if (dropRef) {
+  //     // Check which drop zone the picture is dropped into and show toastify message
+  //     switch (dropRef) {
+  //       case drop1:
+  //         if (id === 4) {
+  //           toast.success("Yes!");
+  //         }
+  //         break;
+  //       case drop2:
+  //         if (id === 6) {
+  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
+  //         }
+  //         break;
+  //       case drop3:
+  //         if (id === 3) {
+  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
+  //         }
+  //         break;
+  //       case drop4:
+  //         if (id === 1) {
+  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
+  //         }
+  //         break;
+  //       case drop5:
+  //         if (id === 5) {
+  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
+  //         }
+  //         break;
+  //       case drop6:
+  //         if (id === 2) {
+  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
+  //         }
+  //         break;
+  //       default:
+  //         break;
+  //     }
+  //   }
+  // };
 
   return (
     <>
+      {/* <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+      /> */}
       <div className="storyboard-container">
         <div className="storyboard-container2">
           <div className="storyboard" ref={drop1}>
