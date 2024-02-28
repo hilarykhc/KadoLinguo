@@ -16,7 +16,7 @@ export default function StoryHero({ selectedStory, handleNextPage }) {
 
   return (
     <div className="hero" onClick={() => handleNextPage(getNextStoryId())}>
-      <Link to={`/stories/${getNextStoryId()}`}>
+      <Link to={`/stories/${getNextStoryId()}`} className="hero__link">
         <img
           className="hero__img"
           src={selectedStory.image}

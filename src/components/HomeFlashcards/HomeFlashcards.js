@@ -11,9 +11,7 @@ export default function HomeFlashcards() {
     <section className="homeFlashcards__about">
       <div className="homeFlashcards__about-top">
         <div className="homeFlashcards__about-top-left">
-          <h2 className="homeFlashcards__about-top-heading" style={titleStyles}>
-            Flashcards.
-          </h2>
+          <h2 className="homeFlashcards__about-top-heading">Flashcards.</h2>
         </div>
         <div className="homeFlashcards__about-top-right">
           <p className="homeFlashcards__about-top-text"></p>

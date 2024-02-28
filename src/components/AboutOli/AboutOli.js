@@ -12,9 +12,7 @@ export default function AboutOli() {
     <section className="homepage__about">
       <div className="homepage__about-top">
         <div className="homepage__about-top-left">
-          <h2 className="homepage__about-top-heading" style={titleStyles}>
-            Learn About Us.
-          </h2>
+          <h2 className="homepage__about-top-heading">Learn About Us.</h2>
         </div>
         <div className="homepage__about-top-right">
           <p className="homepage__about-top-text"></p>

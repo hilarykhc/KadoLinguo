@@ -136,7 +136,7 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 
 1. Highlighted words/sentences
 
-- Each story includes highlighted vocabulary words/sentences where users an click and navigate to flashcard page.
+- Each story includes highlighted vocabulary words/sentences where users can click and navigate to flashcard page.
 
 2. Flashcard Creation
 

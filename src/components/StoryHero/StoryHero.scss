@@ -4,8 +4,15 @@
 @use "../../styles/partials/typography" as *;
 
 .hero {
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__img {
-    width: 100%;
+    width: 85%;
     border: 16px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

@@ -59,9 +59,7 @@ export default function StoryPage() {
 
   return (
     <main className="story">
-      <h2 className="story__heading" style={titleStyles}>
-        Oli's Journey.
-      </h2>
+      <h2 className="story__heading">Oli's Journey.</h2>
       <section className="hero">
         <StoryHero
           selectedStory={selectedStory}
