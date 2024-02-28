@@ -2,7 +2,7 @@
 
 ## Overview
 
-KādoLinguo is an application to help users enhance language skills through stories and flashcards. Kādo, means ‘card’ in Japanese, and ‘gift' in French. Linguo, is often used as a playful way referring to language-related topics.
+KādoLinguo is an application that helps users enhance language skills through stories and flashcards. Kādo, means ‘card’ in Japanese, and ‘gift' in French. Linguo, is often used as a playful way referring to language-related topics.
 
 KādoLinguo allows users to unwrap and explore “linguistic gifts” consisting of inspiring stories, personalized vocabulary and sentences via flashcards.
 

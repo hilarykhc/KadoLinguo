@@ -118,6 +118,11 @@ export default function Sequence2() {
         "Yay! Thank you for helping Oli bake the apple pie. It's super delicious! 😋"
       );
     }
+    // } else {
+    //   toast.error(
+    //     "Oops! It looks like something went wrong. Please try again."
+    //   );
+    // }
   }, [correctImages]);
 
   // const addPicToBoard = (id, setStoryboard) => {

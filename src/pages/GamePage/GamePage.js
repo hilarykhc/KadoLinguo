@@ -25,7 +25,7 @@ export default function GamePage() {
         <Sequence2 />
         <ToastContainer
           position="top-center"
-          autoClose={5000}
+          autoClose={6000}
           hideProgressBar={false}
         />
       </section>
