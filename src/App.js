@@ -9,6 +9,7 @@ import FlashCardPage from "./pages/FlashCardPage/FlashCardPage";
 import PracticePage from "./pages/PracticePage/PracticePage";
 import QuizPage from "./pages/QuizPage/QuizPage";
 import GamePage from "./pages/GamePage/GamePage";
+import Quiz from "./components/Quiz/Quiz";
 
 export default function App() {
   return (
@@ -27,7 +28,7 @@ export default function App() {
             element={<PracticePage />}
           />
           <Route path="/flashcards/quiz" element={<QuizPage />} />
-          <Route path="/flashcards/quiz/:cardId" element={<QuizPage />} />
+          {/* <Route path="/flashcards/quiz/:quizId" element={<QuizPage />} /> */}
           <Route path="/flashcards/game" element={<GamePage />} />
         </Routes>
         <Footer />
