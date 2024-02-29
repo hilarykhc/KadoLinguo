@@ -27,6 +27,7 @@
 
   &__question {
     font-size: 1.25rem;
+    text-align: center;
 
     @include tablet-and-desktop {
       font-size: 2rem;

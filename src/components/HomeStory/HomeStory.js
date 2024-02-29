@@ -38,7 +38,7 @@ export default function HomeStory() {
   return (
     <section className="homestory__hero">
       <div className="homestory__hero-container">
-        <div className="hoomepage__content" style={secondaryTitleStyles}>
+        <div className="homepage__content" style={secondaryTitleStyles}>
           <h1 className="homestory__title">Meet Oli</h1>
           <p className="homestory__paragraph">Embark on the adventures.</p>
           <div className="homestory__button-wrapper">

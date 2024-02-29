@@ -1,13 +1,10 @@
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState, useEffect } from "react";
-import { DndProvider, useDrag, useDrop } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-
+import { useDrop } from "react-dnd";
 import "./Sequence2.scss";
 import pictureList from "../../data/sequence.json";
 import Picture from "../Picture/Picture";
-import DropBox from "../DropBox/DropBox";
 
 export default function Sequence2() {
   const [storyboard0, setStoryboard0] = useState([]);
@@ -18,8 +15,6 @@ export default function Sequence2() {
   const [storyboard5, setStoryboard5] = useState([]);
   const [storyboard6, setStoryboard6] = useState([]);
   const [correctImages, setCorrectImages] = useState([]);
-
-  // const [droppedImgs, setDroppedImgs] = useState([]);
 
   const [{ isOver: isOver1 }, drop1] = useDrop(() => ({
     accept: "image",
@@ -77,15 +72,9 @@ export default function Sequence2() {
     if (dropRef) {
       const isImageCorrect = checkImage(id, dropRef);
       if (isImageCorrect) {
-        // setCorrectImages((prev) => [...prev, id]);
         setCorrectImages((prev) => {
           const updatedArray = [...prev, id];
 
-          // if (updatedArray.length === pictureList.length) {
-          //   toast.success(
-          //     "Yay! Thank you for helping Oli bake the apple pie. It's delicious!"
-          //   );
-          // }
           return updatedArray;
         });
       }
@@ -112,75 +101,15 @@ export default function Sequence2() {
   };
 
   useEffect(() => {
-    //check if all correct images are dropped
     if (correctImages.length === pictureList.length) {
       toast.success(
         "Yay! Thank you for helping Oli bake the apple pie. It's super delicious! 😋"
       );
     }
-    // } else {
-    //   toast.error(
-    //     "Oops! It looks like something went wrong. Please try again."
-    //   );
-    // }
   }, [correctImages]);
-
-  // const addPicToBoard = (id, setStoryboard) => {
-  //   const filteredPicture = pictureList.filter((picture) => id === picture.id);
-  //   setStoryboard([filteredPicture[0]]);
-  // };
-
-  // const addPicToBoard = (id, setStoryboard, dropRef) => {
-  //   console.log(`Image with id ${id} dropped into ${dropRef}`);
-  //   const filteredPicture = pictureList.find((picture) => id === picture.id);
-  //   setStoryboard([filteredPicture]);
-
-  //   if (dropRef) {
-  //     // Check which drop zone the picture is dropped into and show toastify message
-  //     switch (dropRef) {
-  //       case drop1:
-  //         if (id === 4) {
-  //           toast.success("Yes!");
-  //         }
-  //         break;
-  //       case drop2:
-  //         if (id === 6) {
-  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
-  //         }
-  //         break;
-  //       case drop3:
-  //         if (id === 3) {
-  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
-  //         }
-  //         break;
-  //       case drop4:
-  //         if (id === 1) {
-  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
-  //         }
-  //         break;
-  //       case drop5:
-  //         if (id === 5) {
-  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
-  //         }
-  //         break;
-  //       case drop6:
-  //         if (id === 2) {
-  //           toast.success("Yay! Thank you for helping Oli bake the apple pie.");
-  //         }
-  //         break;
-  //       default:
-  //         break;
-  //     }
-  //   }
-  // };
 
   return (
     <>
-      {/* <ToastContainer
-        position="top-center"
-        autoClose={2000}
-        hideProgressBar={false}
-      /> */}
       <div className="storyboard-container">
         <div className="storyboard-container2">
           <div className="storyboard" ref={drop1}>
