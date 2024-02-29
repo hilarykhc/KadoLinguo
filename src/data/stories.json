@@ -1,40 +1,54 @@
 [
   {
     "id": "1",
-    "title": "Chapter 1",
-    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708141878/story1_hphlzs.jpg"
+    "title": "Page 1",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1709182453/7361709154206_.pic_gxfw0j.jpg"
   },
-
   {
     "id": "2",
-    "title": "Chapter 2",
-    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708142567/story2_b1zpk0.jpg"
+    "title": "Page 2",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1709182459/7501709170668_.pic_dry95p.jpg"
   },
-
   {
     "id": "3",
-    "title": "Chapter 3",
-    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708142572/story3_htjqh3.jpg"
+    "title": "Page 3",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1709182467/7561709175532_.pic_cs1vtq.jpg"
   },
-
   {
     "id": "4",
-    "title": "Chapter 4",
-    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708144567/story4_ihpofn.jpg"
+    "title": "Page 4",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1709182473/7391709154212_.pic_vqloh1.jpg"
   },
   {
     "id": "5",
-    "title": "Chapter 5",
-    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708144580/story5_r1ayha.jpg"
+    "title": "Page 5",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1709182477/7401709154216_.pic_muaypd.jpg"
   },
+
   {
     "id": "6",
-    "title": "Chapter 6",
+    "title": "Page 6",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708144567/story4_ihpofn.jpg"
+  },
+
+  {
+    "id": "7",
+    "title": "Page 7",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708141878/story1_hphlzs.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Page 8",
+    "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708142572/story3_htjqh3.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Page 9",
     "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708144587/story6_s3zbda.jpg"
   },
   {
-    "id": "7",
-    "title": "Chapter 7",
+    "id": "10",
+    "title": "Page 10",
     "image": "https://res.cloudinary.com/dcwoohdrl/image/upload/v1708144589/story7_tx7p3f.jpg"
   }
 ]
