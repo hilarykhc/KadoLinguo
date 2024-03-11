@@ -57,35 +57,23 @@ export default function PracticePage() {
   const handleNextClick = () => {
     const nextCardId = currentCardId + 1;
     setCurrentCardId(nextCardId);
-    setIsFlipped(false); // reset flip
+    setIsFlipped(false);
     navigate(`/flashcards/practice/${nextCardId}`);
   };
 
   const handlePrevClick = () => {
     const nextCardId = currentCardId - 1;
     setCurrentCardId(nextCardId);
-    setIsFlipped(false); // reset flip
+    setIsFlipped(false);
     navigate(`/flashcards/practice/${nextCardId}`);
   };
 
   const handleCardClick = () => {
-    setIsFlipped(!isFlipped); // toggle flip
-  };
-  const handleGoHomeClick = () => {
-    navigate("/");
+    setIsFlipped(!isFlipped);
   };
 
   if (loading) {
     return <div>Loading...</div>;
-  }
-
-  if (!currentCard) {
-    return (
-      <div>
-        We've run out of cards!{" "}
-        <button onClick={handleGoHomeClick}>Go Home!</button>
-      </div>
-    );
   }
 
   return (
