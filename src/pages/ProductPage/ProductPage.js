@@ -1,7 +1,7 @@
 import "./ProductPage.scss";
 import { Link } from "react-router-dom";
 import book2 from "../../assets/products/book2.jpg";
-import bookmark from "../../assets/products/bookmark.jpg";
+import postcard2 from "../../assets/products/postcard2.jpg";
 
 export default function ProductPage() {
   return (
@@ -30,12 +30,12 @@ export default function ProductPage() {
         <div className="productpage__about-wrapper">
           <Link to="/products/shop" className="productpage__link">
             <img
-              src={bookmark}
+              src={postcard2}
               alt="Oli's Shop"
               className="productpage__about-img"
             />
           </Link>
-          <h3 className="productpage__about-subtitle">OLI'S SHOP</h3>
+          <h3 className="productpage__about-subtitle">OLI'S GIFT SHOP</h3>
         </div>
       </div>
     </section>
