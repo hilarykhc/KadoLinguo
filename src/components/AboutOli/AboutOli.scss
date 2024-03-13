@@ -22,16 +22,15 @@
     }
 
     &-top-heading {
-      padding: 1.5rem 0.75rem 0;
+      padding: 0.5rem 0.75rem 0;
       font-size: 0.938rem;
 
       @include tablet-and-desktop {
-        padding: 3rem 1.75rem 0;
+        padding: 1rem 1.75rem 0;
         font-size: 1.313rem;
       }
 
       @include desktop {
-        padding: 4rem 1.75rem 0;
         font-size: 2.25rem;
       }
     }
@@ -80,11 +79,19 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       cursor: pointer;
       filter: grayscale(100%);
-      transition: filter 0.3s ease;
-
-      &:hover {
+      // transition: filter 0.3s ease;
+      transition: 200ms all ease-out;
+      position: relative;
+      &:hover,
+      &.clicked {
+        transform: scale(1.2);
         filter: grayscale(0%);
+        z-index: 1;
       }
+
+      // &:hover {
+      //   filter: grayscale(0%);
+      // }
 
       @include tablet-and-desktop {
         width: 14rem;

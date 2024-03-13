@@ -78,11 +78,12 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       cursor: pointer;
       //   filter: grayscale(100%);
-      transition: filter 0.5s ease;
+      // transition: filter 0.5s ease;
+      transition: 200ms all ease-out;
 
       &:hover {
         // filter: grayscale(0%);
-        border: 5px solid $pure-white;
+        border: 10px solid $pure-white;
       }
 
       @include tablet-and-desktop {
