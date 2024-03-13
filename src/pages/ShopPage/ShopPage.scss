@@ -20,5 +20,29 @@
   &__item-img {
     width: 15rem;
     height: 10rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    // transition: filter 0.3s ease-in-out;
+    transition: 200ms all ease-out;
+    position: relative;
+    &:hover,
+    &.clicked {
+      transform: scale(1.2);
+    }
+  }
+
+  &__heading {
+    padding: 3.5rem 0.75rem 1rem;
+    font-size: 0.938rem;
+
+    @include tablet-and-desktop {
+      padding: 6rem 1.75rem 1.25rem;
+      font-size: 1.313rem;
+    }
+
+    @include desktop {
+      padding: 7.5rem 1.75rem 1.5rem;
+      font-size: 2.25rem;
+    }
   }
 }
