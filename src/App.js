@@ -10,6 +10,9 @@ import PracticePage from "./pages/PracticePage/PracticePage";
 import QuizPage from "./pages/QuizPage/QuizPage";
 import GamePage from "./pages/GamePage/GamePage";
 import Quiz from "./components/Quiz/Quiz";
+import ProductPage from "./pages/ProductPage/ProductPage";
+import BooksPage from "./pages/BooksPage/BooksPage";
+import ShopPage from "./pages/ShopPage/ShopPage";
 
 export default function App() {
   return (
@@ -30,6 +33,9 @@ export default function App() {
           <Route path="/flashcards/quiz" element={<QuizPage />} />
           {/* <Route path="/flashcards/quiz/:quizId" element={<QuizPage />} /> */}
           <Route path="/flashcards/game" element={<GamePage />} />
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/products/books" element={<BooksPage />} />
+          <Route path="/products/shop" element={<ShopPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>{" "}

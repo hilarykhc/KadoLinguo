@@ -24,9 +24,9 @@ export default function Header() {
         </Link>
 
         <div className="header__nav">
-          <Link to="/" className={`header__nav-item ${isActive("/")}`}>
+          {/* <Link to="/" className={`header__nav-item ${isActive("/")}`}>
             Home
-          </Link>
+          </Link> */}
           <Link
             to="/about"
             className={`header__nav-item ${isActive("/about")}`}
@@ -44,6 +44,12 @@ export default function Header() {
             className={`header__nav-item ${isActive("/flashcards")}`}
           >
             Flashcards
+          </Link>
+          <Link
+            to="/products"
+            className={`header__nav-item ${isActive("/products")}`}
+          >
+            Products
           </Link>
         </div>
       </section>
