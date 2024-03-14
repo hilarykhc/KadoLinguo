@@ -13,6 +13,7 @@ import Quiz from "./components/Quiz/Quiz";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import BooksPage from "./pages/BooksPage/BooksPage";
 import ShopPage from "./pages/ShopPage/ShopPage";
+import OliPage from "./pages/OliPage/OliPage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/about/oli" element={<OliPage />} />
           <Route path="/stories" element={<StoryPage />} />
           <Route path="/stories/:storyId" element={<StoryPage />} />
           <Route path="/flashcards" element={<FlashCardPage />} />
